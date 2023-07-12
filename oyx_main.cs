@@ -19,6 +19,11 @@ namespace ouyangxu
         {
             InitializeComponent();
         }
+        public oyx_main(string filename)
+        {
+            InitializeComponent();
+            fullname = filename;
+        }
 
         Bitmap img = null;
         string fullname = null;
@@ -47,29 +52,46 @@ namespace ouyangxu
             openFileDialog.Title = "打开图片";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    fullname = openFileDialog.FileName;
-                    Bitmap bitmap = new Bitmap(fullname);
-                    img = new Bitmap(bitmap.Width, bitmap.Height);
-                    Graphics draw = Graphics.FromImage(img);
-                    draw.DrawImage(bitmap, 0, 0, bitmap.Width, bitmap.Height);
-                    pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-                    pictureBox1.Image = img;
-                    openFileDialog.Dispose();
-                    draw.Dispose();
-                    bitmap.Dispose();
-                }
-                catch(Exception ee)
-                {
-                    MessageBox.Show("打开图片失败！" + ee.Message);
-                }
+                fullname = openFileDialog.FileName;
+                openPicture();
+            }
+            openFileDialog.Dispose();
+        }
+
+        private void openPicture()
+        {
+            try
+            {
+                Bitmap bitmap = new Bitmap(fullname);
+                img = new Bitmap(bitmap.Width, bitmap.Height);
+                Graphics draw = Graphics.FromImage(img);
+                draw.DrawImage(bitmap, 0, 0, bitmap.Width, bitmap.Height);
+                pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+                pictureBox1.Image = img;
+                draw.Dispose();
+                bitmap.Dispose();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("打开图片失败！" + ee.Message);
             }
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             打开ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void oyx_main_Load(object sender, EventArgs e)
+        {
+            if (fullname == null || fullname == "")
+            {
+                img = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                Graphics draw = Graphics.FromImage(img);
+                draw.Clear(Color.White);
+                pictureBox1.Image = img;
+            }
+            else openPicture();
         }
 
         bool domousemove = false;

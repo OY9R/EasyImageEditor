@@ -1021,6 +1021,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "oyx_main";
             this.Text = "oyx_main";
+            this.Load += new System.EventHandler(this.oyx_main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
