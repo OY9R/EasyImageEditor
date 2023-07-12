@@ -31,7 +31,7 @@ namespace ouyangxu
         int tmp_width, tmp_height;
 
         DashStyle line_type;
-        LineCap Start_cap, End_cap;
+        LineCap start_cap, end_cap;
         int colortype;
         Color line_color, start_color, end_color, front_color, back_color;
         Bitmap fill_img = null;
@@ -528,6 +528,91 @@ namespace ouyangxu
         private void toolStripButton11_Click(object sender, EventArgs e)
         {
             灰度化ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            line_type = DashStyle.Solid;
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            line_type = DashStyle.DashDot;
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            line_type = DashStyle.DashDotDot;
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            line_type = DashStyle.Dash;
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            line_type = DashStyle.Dot;
+        }
+
+        private void 无ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            start_cap = LineCap.NoAnchor;
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            start_cap = LineCap.ArrowAnchor;
+        }
+
+        private void toolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            start_cap = LineCap.DiamondAnchor;
+        }
+
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            start_cap = LineCap.SquareAnchor;
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            start_cap = LineCap.Triangle;
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+            start_cap = LineCap.RoundAnchor;
+        }
+
+        private void 无ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            end_cap = LineCap.NoAnchor;
+        }
+
+        private void toolStripMenuItem12_Click(object sender, EventArgs e)
+        {
+            end_cap = LineCap.ArrowAnchor;
+        }
+
+        private void toolStripMenuItem13_Click(object sender, EventArgs e)
+        {
+            end_cap = LineCap.DiamondAnchor;
+        }
+
+        private void toolStripMenuItem14_Click(object sender, EventArgs e)
+        {
+            end_cap = LineCap.SquareAnchor;
+        }
+
+        private void toolStripMenuItem15_Click(object sender, EventArgs e)
+        {
+            end_cap = LineCap.Triangle;
+        }
+
+        private void toolStripMenuItem16_Click(object sender, EventArgs e)
+        {
+            end_cap = LineCap.RoundAnchor;
         }
 
         bool domousemove = false;
