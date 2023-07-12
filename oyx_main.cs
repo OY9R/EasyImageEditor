@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -70,10 +71,59 @@ namespace ouyangxu
                 pictureBox1.Image = img;
                 draw.Dispose();
                 bitmap.Dispose();
+                this.Text = fullname.Substring(fullname.LastIndexOf(@"\") + 1);
             }
             catch (Exception ee)
             {
                 MessageBox.Show("打开图片失败！" + ee.Message);
+            }
+        }
+
+        private void savePicture(bool other)
+        {
+            if(img != null)
+            {
+                if(fullname == null || other) {
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "jpeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Png Image|*.png|TIF File|*.tiff|Icon File|*.icon";
+                    saveFileDialog.OverwritePrompt = true;
+                    saveFileDialog.Title = "保存/另存为图像";
+                    saveFileDialog.ValidateNames = true;
+                    saveFileDialog.RestoreDirectory = true;
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            switch(saveFileDialog.FilterIndex)
+                            {
+                                case 1: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg); break;
+                                case 2: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Bmp); break;
+                                case 3: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Gif); break;
+                                case 4: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Png); break;
+                                case 5: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Tiff); break;
+                                case 6: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Icon); break;
+                                default: MessageBox.Show("不支持的文件格式！\n保存图片失败！"); break;
+                            }
+                            fullname = saveFileDialog.FileName;
+                            this.Text = fullname.Substring(fullname.LastIndexOf(@"\") + 1);
+                        }
+                        catch(Exception ee)
+                        {
+                            MessageBox.Show("保存图片失败!\n" + ee.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                try
+                {
+                    img.Save(fullname);
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show("保存图片失败!\n" + ee.Message);
+                }
             }
         }
 
@@ -122,6 +172,21 @@ namespace ouyangxu
                     MessageBox.Show("不支持的文件格式！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            savePicture(false);
+        }
+
+        private void 另存为ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            savePicture(true);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            savePicture(false);
         }
 
         bool domousemove = false;
