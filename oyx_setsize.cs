@@ -20,10 +20,10 @@ namespace ouyangxu
         private void oyx_setsize_Load(object sender, EventArgs e)
         {
             ff = (oyx_main)this.Owner;
-            text_height.Text = ff.Height.ToString();
-            text_width.Text = ff.Width.ToString();
-            text_newheight.Text = ff.Height.ToString();
-            text_newwidth.Text = ff.Width.ToString();
+            text_height.Text = ff.ImageHeight.ToString();
+            text_width.Text = ff.ImageWidth.ToString();
+            text_newheight.Text = ff.ImageHeight.ToString();
+            text_newwidth.Text = ff.ImageWidth.ToString();
         }
         int active_tbox = 0;
         private void text_newwidth_TextChanged(object sender, EventArgs e)

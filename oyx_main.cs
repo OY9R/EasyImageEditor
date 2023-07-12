@@ -71,7 +71,9 @@ namespace ouyangxu
                 pictureBox1.Image = img;
                 draw.Dispose();
                 bitmap.Dispose();
-                this.Text = fullname.Substring(fullname.LastIndexOf(@"\") + 1);
+                this.Text = fullname.Substring(fullname.LastIndexOf(@"\") + 1) + " " + img.Width.ToString() + "*" + img.Width.ToString();
+                tmp_width = img.Width;
+                tmp_height = img.Height;
             }
             catch (Exception ee)
             {
@@ -287,7 +289,8 @@ namespace ouyangxu
         private void 图像大小设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(img == null) return;
-            tmp_width = img.Width; tmp_height = img.Height;
+            tmp_width = img.Width;
+            tmp_height = img.Height;
             oyx_setsize newform = new oyx_setsize();
             newform.Owner = this;
             newform.ShowDialog();
@@ -300,6 +303,7 @@ namespace ouyangxu
                 pictureBox1.Image = img;
                 pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             }
+            this.Text = fullname.Substring(fullname.LastIndexOf(@"\") + 1) + " " + img.Width.ToString() + "*" + img.Width.ToString();
         }
 
         bool domousemove = false;
