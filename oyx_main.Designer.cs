@@ -108,10 +108,10 @@
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
+            this.colorshow = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
+            this.colorfill = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
@@ -555,31 +555,33 @@
             // 线条颜色ToolStripMenuItem
             // 
             this.线条颜色ToolStripMenuItem.Name = "线条颜色ToolStripMenuItem";
-            this.线条颜色ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.线条颜色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.线条颜色ToolStripMenuItem.Text = "线条颜色";
+            this.线条颜色ToolStripMenuItem.Click += new System.EventHandler(this.线条颜色ToolStripMenuItem_Click);
             // 
             // 填充色ToolStripMenuItem
             // 
             this.填充色ToolStripMenuItem.Name = "填充色ToolStripMenuItem";
-            this.填充色ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.填充色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.填充色ToolStripMenuItem.Text = "填充色";
+            this.填充色ToolStripMenuItem.Click += new System.EventHandler(this.填充色ToolStripMenuItem_Click);
             // 
             // 渐变色ToolStripMenuItem
             // 
             this.渐变色ToolStripMenuItem.Name = "渐变色ToolStripMenuItem";
-            this.渐变色ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.渐变色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.渐变色ToolStripMenuItem.Text = "渐变色";
             // 
             // 纹理ToolStripMenuItem
             // 
             this.纹理ToolStripMenuItem.Name = "纹理ToolStripMenuItem";
-            this.纹理ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.纹理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.纹理ToolStripMenuItem.Text = "纹理";
             // 
             // 图片填充ToolStripMenuItem
             // 
             this.图片填充ToolStripMenuItem.Name = "图片填充ToolStripMenuItem";
-            this.图片填充ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.图片填充ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.图片填充ToolStripMenuItem.Text = "图片填充";
             // 
             // 帮助ToolStripMenuItem
@@ -627,10 +629,10 @@
             this.toolStripButton15,
             this.toolStripSeparator4,
             this.toolStripLabel1,
-            this.toolStripButton16,
+            this.colorshow,
             this.toolStripSeparator5,
             this.toolStripLabel2,
-            this.toolStripButton17,
+            this.colorfill,
             this.toolStripSeparator6,
             this.toolStripLabel3,
             this.toolStripSplitButton1,
@@ -815,14 +817,15 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(69, 24);
             this.toolStripLabel1.Text = "线条颜色";
             // 
-            // toolStripButton16
+            // colorshow
             // 
-            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
-            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton16.Text = "toolStripButton16";
+            this.colorshow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.colorshow.Image = ((System.Drawing.Image)(resources.GetObject("colorshow.Image")));
+            this.colorshow.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.colorshow.Name = "colorshow";
+            this.colorshow.Size = new System.Drawing.Size(29, 24);
+            this.colorshow.Text = "toolStripButton16";
+            this.colorshow.Click += new System.EventHandler(this.colorshow_Click);
             // 
             // toolStripSeparator5
             // 
@@ -835,14 +838,15 @@
             this.toolStripLabel2.Size = new System.Drawing.Size(69, 24);
             this.toolStripLabel2.Text = "填充颜色";
             // 
-            // toolStripButton17
+            // colorfill
             // 
-            this.toolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton17.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton17.Image")));
-            this.toolStripButton17.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton17.Name = "toolStripButton17";
-            this.toolStripButton17.Size = new System.Drawing.Size(29, 24);
-            this.toolStripButton17.Text = "toolStripButton17";
+            this.colorfill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.colorfill.Image = ((System.Drawing.Image)(resources.GetObject("colorfill.Image")));
+            this.colorfill.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.colorfill.Name = "colorfill";
+            this.colorfill.Size = new System.Drawing.Size(29, 24);
+            this.colorfill.Text = "toolStripButton17";
+            this.colorfill.Click += new System.EventHandler(this.colorfill_Click);
             // 
             // toolStripSeparator6
             // 
@@ -1168,10 +1172,10 @@
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private System.Windows.Forms.ToolStripButton colorshow;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton toolStripButton17;
+        private System.Windows.Forms.ToolStripButton colorfill;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;

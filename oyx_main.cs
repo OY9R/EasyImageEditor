@@ -615,6 +615,42 @@ namespace ouyangxu
             end_cap = LineCap.RoundAnchor;
         }
 
+        private void 线条颜色ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            colorDialog.AllowFullOpen = true;
+            colorDialog.Color = colorshow.BackColor;
+            if(colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                colorshow.BackColor = colorDialog.Color;
+                line_color = colorDialog.Color;
+                front_color = colorDialog.Color;
+            }
+        }
+
+        private void colorshow_Click(object sender, EventArgs e)
+        {
+            线条颜色ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void 填充色ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            colorDialog.AllowFullOpen = true;
+            colorDialog.Color = colorfill.BackColor;
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                colorfill.BackColor = colorDialog.Color;
+                back_color = colorDialog.Color;
+                colortype = 1;
+            }
+        }
+
+        private void colorfill_Click(object sender, EventArgs e)
+        {
+            填充色ToolStripMenuItem_Click(sender, e);
+        }
+
         bool domousemove = false;
         ArrayList array_point = new ArrayList();
         string draw_string = "";
