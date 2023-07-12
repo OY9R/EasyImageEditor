@@ -191,15 +191,16 @@
             // 打开ToolStripMenuItem
             // 
             this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.打开ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.打开ToolStripMenuItem.Text = "打开";
             this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
             // 
             // 新建ToolStripMenuItem
             // 
             this.新建ToolStripMenuItem.Name = "新建ToolStripMenuItem";
-            this.新建ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.新建ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.新建ToolStripMenuItem.Text = "新建";
+            this.新建ToolStripMenuItem.Click += new System.EventHandler(this.新建ToolStripMenuItem_Click);
             // 
             // 保存ToolStripMenuItem
             // 
@@ -218,8 +219,9 @@
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // 查看ToolStripMenuItem
             // 
@@ -235,25 +237,25 @@
             // 实际大小ToolStripMenuItem
             // 
             this.实际大小ToolStripMenuItem.Name = "实际大小ToolStripMenuItem";
-            this.实际大小ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.实际大小ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.实际大小ToolStripMenuItem.Text = "实际大小";
             // 
             // 放大ToolStripMenuItem
             // 
             this.放大ToolStripMenuItem.Name = "放大ToolStripMenuItem";
-            this.放大ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.放大ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.放大ToolStripMenuItem.Text = "放大";
             // 
             // 缩小ToolStripMenuItem
             // 
             this.缩小ToolStripMenuItem.Name = "缩小ToolStripMenuItem";
-            this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.缩小ToolStripMenuItem.Text = "缩小";
             // 
             // 适合窗口ToolStripMenuItem
             // 
             this.适合窗口ToolStripMenuItem.Name = "适合窗口ToolStripMenuItem";
-            this.适合窗口ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.适合窗口ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.适合窗口ToolStripMenuItem.Text = "适合大小";
             // 
             // 编辑ToolStripMenuItem
@@ -616,6 +618,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
             // 
@@ -1025,6 +1028,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "oyx_main";
             this.Text = "oyx_main";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.oyx_main_FormClosing);
             this.Load += new System.EventHandler(this.oyx_main_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.oyx_main_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.oyx_main_DragEnter);

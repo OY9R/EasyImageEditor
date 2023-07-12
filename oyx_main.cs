@@ -54,12 +54,12 @@ namespace ouyangxu
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 fullname = openFileDialog.FileName;
-                openPicture();
+                open();
             }
             openFileDialog.Dispose();
         }
 
-        private void openPicture()
+        private void open()
         {
             try
             {
@@ -79,7 +79,27 @@ namespace ouyangxu
             }
         }
 
-        private void savePicture(bool other)
+        private void newf()
+        {
+            oyx_main f = new oyx_main();
+            f.Show();
+            exit(false);
+        }
+
+        private void exit(bool quit)
+        {
+            if(MessageBox.Show("是否保存更改?", "保存更改?", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                save(false);
+            }
+            else
+            {
+                if (quit) System.Environment.Exit(0);
+                else this.Hide();
+            }
+        }
+
+        private void save(bool other)
         {
             if(img != null)
             {
@@ -141,7 +161,7 @@ namespace ouyangxu
                 draw.Clear(Color.White);
                 pictureBox1.Image = img;
             }
-            else openPicture();
+            else open();
         }
 
         private void oyx_main_DragEnter(object sender, DragEventArgs e)
@@ -176,17 +196,37 @@ namespace ouyangxu
 
         private void 保存ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            savePicture(false);
+            save(false);
         }
 
         private void 另存为ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            savePicture(true);
+            save(true);
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            savePicture(false);
+            save(false);
+        }
+
+        private void 新建ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newf();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            newf();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            exit(true);
+        }
+
+        private void oyx_main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            exit(true);
         }
 
         bool domousemove = false;
