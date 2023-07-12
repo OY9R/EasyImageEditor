@@ -52,6 +52,12 @@
     <Compile Include="oyx_main.Designer.cs">
       <DependentUpon>oyx_main.cs</DependentUpon>
     </Compile>
+    <Compile Include="oyx_sethatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oyx_sethatch.Designer.cs">
+      <DependentUpon>oyx_sethatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="oyx_setsize.cs">
       <SubType>Form</SubType>
     </Compile>

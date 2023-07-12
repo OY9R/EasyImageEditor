@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ouyangxu
@@ -22,7 +19,7 @@ namespace ouyangxu
             {
                 filename = string.Join(" ", args);
                 string ex = filename.Substring(filename.LastIndexOf('.') + 1).ToLower();
-                if(ex.Equals("bmp") || ex.Equals("jpg") || ex.Equals("gif") || ex.Equals("png") || ex.Equals("tiff") || ex.Equals("icon"))
+                if (ex.Equals("bmp") || ex.Equals("jpg") || ex.Equals("gif") || ex.Equals("png") || ex.Equals("tiff") || ex.Equals("icon"))
                     Application.Run(new oyx_main(filename));
                 else
                 {

@@ -1,15 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ouyangxu
@@ -90,7 +82,7 @@ namespace ouyangxu
 
         private void exit(bool quit)
         {
-            if(MessageBox.Show("是否保存更改?", "保存更改?", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("是否保存更改?", "保存更改?", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 save(false);
             }
@@ -103,9 +95,10 @@ namespace ouyangxu
 
         private void save(bool other)
         {
-            if(img != null)
+            if (img != null)
             {
-                if(fullname == null || other) {
+                if (fullname == null || other)
+                {
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
                     saveFileDialog.Filter = "jpeg Image|*.jpg|Bitmap Image|*.bmp|Gif Image|*.gif|Png Image|*.png|TIF File|*.tiff|Icon File|*.icon";
                     saveFileDialog.OverwritePrompt = true;
@@ -116,7 +109,7 @@ namespace ouyangxu
                     {
                         try
                         {
-                            switch(saveFileDialog.FilterIndex)
+                            switch (saveFileDialog.FilterIndex)
                             {
                                 case 1: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg); break;
                                 case 2: img.Save(saveFileDialog.FileName, System.Drawing.Imaging.ImageFormat.Bmp); break;
@@ -129,7 +122,7 @@ namespace ouyangxu
                             fullname = saveFileDialog.FileName;
                             this.Text = fullname.Substring(fullname.LastIndexOf(@"\") + 1);
                         }
-                        catch(Exception ee)
+                        catch (Exception ee)
                         {
                             MessageBox.Show("保存图片失败!\n" + ee.Message);
                         }
@@ -168,7 +161,7 @@ namespace ouyangxu
 
         private void oyx_main_DragEnter(object sender, DragEventArgs e)
         {
-            if(e.Data.GetDataPresent(DataFormats.FileDrop))
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 e.Effect = DragDropEffects.Link;
             }
@@ -185,7 +178,8 @@ namespace ouyangxu
             foreach (string s in ss)
             {
                 string ex = s.Substring(s.LastIndexOf('.') + 1).ToLower();
-                if (ex.Equals("bmp") || ex.Equals("jpg") || ex.Equals("gif") || ex.Equals("png") || ex.Equals("tiff") || ex.Equals("icon")) { 
+                if (ex.Equals("bmp") || ex.Equals("jpg") || ex.Equals("gif") || ex.Equals("png") || ex.Equals("tiff") || ex.Equals("icon"))
+                {
                     oyx_main f = new oyx_main(s);
                     f.Show();
                 }
@@ -239,7 +233,7 @@ namespace ouyangxu
 
         private void 放大ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if( img == null) return;
+            if (img == null) return;
             pictureBox1.Height = (int)Math.Ceiling(pictureBox1.Height * 1.1);
             pictureBox1.Width = (int)Math.Ceiling(pictureBox1.Width * 1.1);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -288,7 +282,7 @@ namespace ouyangxu
 
         private void 图像大小设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(img == null) return;
+            if (img == null) return;
             tmp_width = img.Width;
             tmp_height = img.Height;
             oyx_setsize newform = new oyx_setsize();
@@ -308,7 +302,7 @@ namespace ouyangxu
 
         private void 水平翻转ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(img != null)
+            if (img != null)
             {
                 img.RotateFlip(RotateFlipType.RotateNoneFlipX);
                 pictureBox1.Image = img;
@@ -346,13 +340,13 @@ namespace ouyangxu
         {
             if (img == null) return;
             Color c_temp = new Color();
-            for(int i=0;i<img.Width;i++)
+            for (int i = 0; i < img.Width; i++)
             {
-                for(int j = 0; j < img.Height; j++)
+                for (int j = 0; j < img.Height; j++)
                 {
                     c_temp = img.GetPixel(i, j);
-                    Color c_new = Color.FromArgb(255-c_temp.R, 255-c_temp.G, 255-c_temp.B);
-                    img.SetPixel(i,j,c_new);
+                    Color c_new = Color.FromArgb(255 - c_temp.R, 255 - c_temp.G, 255 - c_temp.B);
+                    img.SetPixel(i, j, c_new);
                 }
             }
             pictureBox1.Image = img;
@@ -396,7 +390,7 @@ namespace ouyangxu
                     c_temp = img.GetPixel(i, j);
                     int gray = (c_temp.R + c_temp.G + c_temp.B) / 3;
                     int black_white = gray > 128 ? 255 : 0;
-                    Color c_new = Color.FromArgb(black_white,black_white,black_white);
+                    Color c_new = Color.FromArgb(black_white, black_white, black_white);
                     img.SetPixel(i, j, c_new);
                 }
             }
@@ -478,7 +472,7 @@ namespace ouyangxu
                 for (int j = 3; j < myBitmap.Height - 3; j++)
                 {
                     int red = 0, green = 0, blue = 0;
-                    pixel = myBitmap.GetPixel(i + random.Next()%7 - 3, j + random.Next() % 7 - 3);
+                    pixel = myBitmap.GetPixel(i + random.Next() % 7 - 3, j + random.Next() % 7 - 3);
                     red = pixel.R; green = pixel.G; blue = pixel.B;
                     myBitmap.SetPixel(i - 1, j - 1, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
                 }
@@ -492,12 +486,12 @@ namespace ouyangxu
             Random random = new Random();
             Color pixel;
             //这里注意边界的像素暂不处理，否则超出数组范围
-            for (int i = 3; i < myBitmap.Width-3; i+=7)
+            for (int i = 3; i < myBitmap.Width - 3; i += 7)
             {
-                for (int j = 3; j < myBitmap.Height-3; j+=7)
+                for (int j = 3; j < myBitmap.Height - 3; j += 7)
                 {
                     int red = 0, green = 0, blue = 0;
-                    pixel = myBitmap.GetPixel(i , j);
+                    pixel = myBitmap.GetPixel(i, j);
                     red = pixel.R; green = pixel.G; blue = pixel.B;
                     for (int k = -3; k <= 3; k++)
                     {
@@ -620,7 +614,7 @@ namespace ouyangxu
             ColorDialog colorDialog = new ColorDialog();
             colorDialog.AllowFullOpen = true;
             colorDialog.Color = colorshow.BackColor;
-            if(colorDialog.ShowDialog() == DialogResult.OK)
+            if (colorDialog.ShowDialog() == DialogResult.OK)
             {
                 colorshow.BackColor = colorDialog.Color;
                 line_color = colorDialog.Color;

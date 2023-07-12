@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ouyangxu
@@ -28,9 +21,9 @@ namespace ouyangxu
         int active_tbox = 0;
         private void text_newwidth_TextChanged(object sender, EventArgs e)
         {
-            if (active_tbox!=1||text_newwidth.Text.Length==0) return;
+            if (active_tbox != 1 || text_newwidth.Text.Length == 0) return;
             int newwidth;
-            if(!int.TryParse(text_newwidth.Text.Trim(),out newwidth))
+            if (!int.TryParse(text_newwidth.Text.Trim(), out newwidth))
             {
                 MessageBox.Show("请输入正确的数字！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -42,7 +35,7 @@ namespace ouyangxu
 
         private void text_newheight_TextChanged(object sender, EventArgs e)
         {
-            if (active_tbox!=2 || text_newheight.Text.Length == 0) return;
+            if (active_tbox != 2 || text_newheight.Text.Length == 0) return;
             int newheight;
             if (!int.TryParse(text_newheight.Text.Trim(), out newheight))
             {
@@ -105,7 +98,7 @@ namespace ouyangxu
         private void button1_Click(object sender, EventArgs e)
         {
             int newwidth, newheight;
-            if (int.TryParse(text_newheight.Text,out newheight)&&int.TryParse(text_newwidth.Text,out newwidth))
+            if (int.TryParse(text_newheight.Text, out newheight) && int.TryParse(text_newwidth.Text, out newwidth))
             {
                 ff.ImageHeight = newheight;
                 ff.ImageWidth = newwidth;
