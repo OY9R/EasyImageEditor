@@ -229,6 +229,61 @@ namespace ouyangxu
             exit(true);
         }
 
+        private void 实际大小ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+        }
+
+        private void 放大ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if( img == null) return;
+            pictureBox1.Height = (int)Math.Ceiling(pictureBox1.Height * 1.1);
+            pictureBox1.Width = (int)Math.Ceiling(pictureBox1.Width * 1.1);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void 缩小ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            pictureBox1.Height = (int)Math.Ceiling(pictureBox1.Height * 0.9);
+            pictureBox1.Width = (int)Math.Ceiling(pictureBox1.Width * 0.9);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void 适合窗口ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            pictureBox1.Height = (int)Math.Ceiling((decimal)flowLayoutPanel1.Height);
+            pictureBox1.Width = (int)Math.Ceiling((decimal)flowLayoutPanel1.Width);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            适合窗口ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            实际大小ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            放大ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            缩小ToolStripMenuItem_Click(sender, e);
+        }
+
         bool domousemove = false;
         ArrayList array_point = new ArrayList();
         string draw_string = "";

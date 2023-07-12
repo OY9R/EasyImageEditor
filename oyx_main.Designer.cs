@@ -239,24 +239,28 @@
             this.实际大小ToolStripMenuItem.Name = "实际大小ToolStripMenuItem";
             this.实际大小ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.实际大小ToolStripMenuItem.Text = "实际大小";
+            this.实际大小ToolStripMenuItem.Click += new System.EventHandler(this.实际大小ToolStripMenuItem_Click);
             // 
             // 放大ToolStripMenuItem
             // 
             this.放大ToolStripMenuItem.Name = "放大ToolStripMenuItem";
             this.放大ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.放大ToolStripMenuItem.Text = "放大";
+            this.放大ToolStripMenuItem.Click += new System.EventHandler(this.放大ToolStripMenuItem_Click);
             // 
             // 缩小ToolStripMenuItem
             // 
             this.缩小ToolStripMenuItem.Name = "缩小ToolStripMenuItem";
             this.缩小ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.缩小ToolStripMenuItem.Text = "缩小";
+            this.缩小ToolStripMenuItem.Click += new System.EventHandler(this.缩小ToolStripMenuItem_Click);
             // 
             // 适合窗口ToolStripMenuItem
             // 
             this.适合窗口ToolStripMenuItem.Name = "适合窗口ToolStripMenuItem";
             this.适合窗口ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.适合窗口ToolStripMenuItem.Text = "适合大小";
+            this.适合窗口ToolStripMenuItem.Click += new System.EventHandler(this.适合窗口ToolStripMenuItem_Click);
             // 
             // 编辑ToolStripMenuItem
             // 
@@ -653,6 +657,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripButton5
             // 
@@ -662,6 +667,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton5.Text = "toolStripButton5";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripButton6
             // 
@@ -671,6 +677,7 @@
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton6.Text = "toolStripButton6";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // toolStripButton7
             // 
@@ -680,6 +687,7 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton7.Text = "toolStripButton7";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // toolStripSeparator2
             // 
@@ -1014,6 +1022,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(889, 396);
             this.flowLayoutPanel1.TabIndex = 4;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // oyx_main
             // 
