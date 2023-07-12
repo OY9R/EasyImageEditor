@@ -357,8 +357,9 @@
             // 图像大小设置ToolStripMenuItem
             // 
             this.图像大小设置ToolStripMenuItem.Name = "图像大小设置ToolStripMenuItem";
-            this.图像大小设置ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.图像大小设置ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.图像大小设置ToolStripMenuItem.Text = "图像大小设置";
+            this.图像大小设置ToolStripMenuItem.Click += new System.EventHandler(this.图像大小设置ToolStripMenuItem_Click);
             // 
             // 绘图设置ToolStripMenuItem
             // 

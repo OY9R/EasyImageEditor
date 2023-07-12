@@ -284,6 +284,24 @@ namespace ouyangxu
             缩小ToolStripMenuItem_Click(sender, e);
         }
 
+        private void 图像大小设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(img == null) return;
+            tmp_width = img.Width; tmp_height = img.Height;
+            oyx_setsize newform = new oyx_setsize();
+            newform.Owner = this;
+            newform.ShowDialog();
+            if (tmp_height != img.Width || tmp_height != img.Height)
+            {
+                Bitmap bitmap = new Bitmap(tmp_width, tmp_height);
+                Graphics draw = Graphics.FromImage(bitmap);
+                draw.DrawImage(img, 0, 0, bitmap.Width, bitmap.Height);
+                img = bitmap;
+                pictureBox1.Image = img;
+                pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            }
+        }
+
         bool domousemove = false;
         ArrayList array_point = new ArrayList();
         string draw_string = "";
