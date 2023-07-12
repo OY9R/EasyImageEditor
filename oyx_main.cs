@@ -511,6 +511,25 @@ namespace ouyangxu
             pictureBox1.Image = myBitmap;
         }
 
+        private void toolStripButton8_Click(object sender, EventArgs e)
+        {
+            反色ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton9_Click(object sender, EventArgs e)
+        {
+            锐化ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            马赛克效果ToolStripMenuItem_Click(sender, e);
+        }
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            灰度化ToolStripMenuItem_Click(sender, e);
+        }
+
         bool domousemove = false;
         ArrayList array_point = new ArrayList();
         string draw_string = "";
