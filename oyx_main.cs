@@ -306,6 +306,42 @@ namespace ouyangxu
             this.Text = fullname.Substring(fullname.LastIndexOf(@"\") + 1) + " " + img.Width.ToString() + "*" + img.Width.ToString();
         }
 
+        private void 水平翻转ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(img != null)
+            {
+                img.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                pictureBox1.Image = img;
+            }
+        }
+
+        private void 垂直翻转ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img != null)
+            {
+                img.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                pictureBox1.Image = img;
+            }
+        }
+
+        private void 顺时针旋转90度ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img != null)
+            {
+                img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pictureBox1.Image = img;
+            }
+        }
+
+        private void 逆时针旋转90度ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img != null)
+            {
+                img.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                pictureBox1.Image = img;
+            }
+        }
+
         bool domousemove = false;
         ArrayList array_point = new ArrayList();
         string draw_string = "";
