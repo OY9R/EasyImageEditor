@@ -315,48 +315,56 @@
             this.反色ToolStripMenuItem.Name = "反色ToolStripMenuItem";
             this.反色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.反色ToolStripMenuItem.Text = "反色";
+            this.反色ToolStripMenuItem.Click += new System.EventHandler(this.反色ToolStripMenuItem_Click);
             // 
             // 浮雕ToolStripMenuItem
             // 
             this.浮雕ToolStripMenuItem.Name = "浮雕ToolStripMenuItem";
             this.浮雕ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.浮雕ToolStripMenuItem.Text = "浮雕";
+            this.浮雕ToolStripMenuItem.Click += new System.EventHandler(this.浮雕ToolStripMenuItem_Click);
             // 
             // 黑白ToolStripMenuItem
             // 
             this.黑白ToolStripMenuItem.Name = "黑白ToolStripMenuItem";
             this.黑白ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.黑白ToolStripMenuItem.Text = "黑白";
+            this.黑白ToolStripMenuItem.Click += new System.EventHandler(this.黑白ToolStripMenuItem_Click);
             // 
             // 柔化ToolStripMenuItem
             // 
             this.柔化ToolStripMenuItem.Name = "柔化ToolStripMenuItem";
             this.柔化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.柔化ToolStripMenuItem.Text = "柔化";
+            this.柔化ToolStripMenuItem.Click += new System.EventHandler(this.柔化ToolStripMenuItem_Click);
             // 
             // 锐化ToolStripMenuItem
             // 
             this.锐化ToolStripMenuItem.Name = "锐化ToolStripMenuItem";
             this.锐化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.锐化ToolStripMenuItem.Text = "锐化";
+            this.锐化ToolStripMenuItem.Click += new System.EventHandler(this.锐化ToolStripMenuItem_Click);
             // 
             // 灰度化ToolStripMenuItem
             // 
             this.灰度化ToolStripMenuItem.Name = "灰度化ToolStripMenuItem";
             this.灰度化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.灰度化ToolStripMenuItem.Text = "灰度化";
+            this.灰度化ToolStripMenuItem.Click += new System.EventHandler(this.灰度化ToolStripMenuItem_Click);
             // 
             // 雾化ToolStripMenuItem
             // 
             this.雾化ToolStripMenuItem.Name = "雾化ToolStripMenuItem";
             this.雾化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.雾化ToolStripMenuItem.Text = "雾化";
+            this.雾化ToolStripMenuItem.Click += new System.EventHandler(this.雾化ToolStripMenuItem_Click);
             // 
             // 马赛克效果ToolStripMenuItem
             // 
             this.马赛克效果ToolStripMenuItem.Name = "马赛克效果ToolStripMenuItem";
             this.马赛克效果ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.马赛克效果ToolStripMenuItem.Text = "马赛克效果";
+            this.马赛克效果ToolStripMenuItem.Click += new System.EventHandler(this.马赛克效果ToolStripMenuItem_Click);
             // 
             // 图像大小设置ToolStripMenuItem
             // 

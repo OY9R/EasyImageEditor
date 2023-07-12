@@ -342,6 +342,175 @@ namespace ouyangxu
             }
         }
 
+        private void 反色ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            Color c_temp = new Color();
+            for(int i=0;i<img.Width;i++)
+            {
+                for(int j = 0; j < img.Height; j++)
+                {
+                    c_temp = img.GetPixel(i, j);
+                    Color c_new = Color.FromArgb(255-c_temp.R, 255-c_temp.G, 255-c_temp.B);
+                    img.SetPixel(i,j,c_new);
+                }
+            }
+            pictureBox1.Image = img;
+        }
+
+        private void 浮雕ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            Bitmap myBitmap = new Bitmap(pictureBox1.Image);//创建Bitmap对象：提取像素信息，转化为二维数组
+            for (int i = 0; i < myBitmap.Width - 1; i++)
+            {
+                for (int j = 0; j < myBitmap.Height - 1; j++)
+                {
+                    Color Color1 = myBitmap.GetPixel(i, j);//调用GetPixel方法获得像素点颜色
+                    Color Color2 = myBitmap.GetPixel(i + 1, j + 1);
+                    int red = Math.Abs(Color1.R - Color2.R + 128); //调用绝对值Abs函数
+                    //颜色处理
+                    int green = Math.Abs(Color1.G - Color2.G + 128);
+                    int blue = Math.Abs(Color1.B - Color2.B + 128);
+                    if (red > 255) red = 255;
+                    if (red < 0) red = 0;
+                    if (green > 255) green = 255;
+                    if (green < 0) green = 0;
+                    if (blue > 255) blue = 255;
+                    if (blue < 0) blue = 0;
+                    //用SetPixel()方法设置像素点颜色
+                    myBitmap.SetPixel(i, j, Color.FromArgb(red, green, blue));
+                }
+            }
+            pictureBox1.Image = myBitmap;
+        }
+
+        private void 黑白ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            Color c_temp = new Color();
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    c_temp = img.GetPixel(i, j);
+                    int gray = (c_temp.R + c_temp.G + c_temp.B) / 3;
+                    int black_white = gray > 128 ? 255 : 0;
+                    Color c_new = Color.FromArgb(black_white,black_white,black_white);
+                    img.SetPixel(i, j, c_new);
+                }
+            }
+            pictureBox1.Image = img;
+        }
+
+        private void 灰度化ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            Color c_temp = new Color();
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    c_temp = img.GetPixel(i, j);
+                    int gray = (c_temp.R + c_temp.G + c_temp.B) / 3;
+                    Color c_new = Color.FromArgb(gray, gray, gray);
+                    img.SetPixel(i, j, c_new);
+                }
+            }
+            pictureBox1.Image = img;
+        }
+
+        private void Laplacian(double[] Laplacian)
+        {
+            Bitmap myBitmap = new Bitmap(pictureBox1.Image);
+            //建立拉普拉斯模板
+            Color pixel;
+            //这里注意边界的像素暂不处理，否则超出数组范围
+            for (int i = 1; i < myBitmap.Width - 1; i++)
+            {
+                for (int j = 1; j < myBitmap.Height - 1; j++)
+                {
+                    int red = 0, green = 0, blue = 0;
+                    int index = 0;
+                    for (int col = -1; col <= 1; col++) //3*3处理
+                    {
+                        for (int row = -1; row <= 1; row++)
+                        {
+                            pixel = myBitmap.GetPixel(i + row, j + col);
+                            red += (int)(pixel.R * Laplacian[index]);
+                            green += (int)(pixel.G * Laplacian[index]);
+                            blue += (int)(pixel.B * Laplacian[index]);
+                            index++;
+                        }
+                    }
+                    if (red > 255) red = 255;
+                    if (red < 0) red = 0;
+                    if (green > 255) green = 255;
+                    if (green < 0) green = 0;
+                    if (blue > 255) blue = 255;
+                    if (blue < 0) blue = 0;
+                    myBitmap.SetPixel(i - 1, j - 1, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
+                }
+            }
+            pictureBox1.Image = myBitmap;
+        }
+
+        private void 柔化ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            double[] Lap = { 0.1, 0.1, 0.1, 0.1, 0.2, 0.1, 0.1, 0.1, 0.1 };
+            Laplacian(Lap);
+        }
+
+        private void 锐化ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            double[] Lap = { -1, -1, -1, -1, 9, -1, -1, -1, -1 };
+            Laplacian(Lap);
+        }
+
+        private void 雾化ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap myBitmap = new Bitmap(pictureBox1.Image);
+            Random random = new Random();
+            Color pixel;
+            //这里注意边界的像素暂不处理，否则超出数组范围
+            for (int i = 3; i < myBitmap.Width - 3; i++)
+            {
+                for (int j = 3; j < myBitmap.Height - 3; j++)
+                {
+                    int red = 0, green = 0, blue = 0;
+                    pixel = myBitmap.GetPixel(i + random.Next()%7 - 3, j + random.Next() % 7 - 3);
+                    red = pixel.R; green = pixel.G; blue = pixel.B;
+                    myBitmap.SetPixel(i - 1, j - 1, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
+                }
+            }
+            pictureBox1.Image = myBitmap;
+        }
+
+        private void 马赛克效果ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bitmap myBitmap = new Bitmap(pictureBox1.Image);
+            Random random = new Random();
+            Color pixel;
+            //这里注意边界的像素暂不处理，否则超出数组范围
+            for (int i = 3; i < myBitmap.Width-3; i+=7)
+            {
+                for (int j = 3; j < myBitmap.Height-3; j+=7)
+                {
+                    int red = 0, green = 0, blue = 0;
+                    pixel = myBitmap.GetPixel(i , j);
+                    red = pixel.R; green = pixel.G; blue = pixel.B;
+                    for (int k = -3; k <= 3; k++)
+                    {
+                        for (int l = -3; l <= 3; l++)
+                        {
+                            myBitmap.SetPixel(i + k, j + l, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
+                        }
+                    }
+                }
+            }
+            pictureBox1.Image = myBitmap;
+        }
+
         bool domousemove = false;
         ArrayList array_point = new ArrayList();
         string draw_string = "";
