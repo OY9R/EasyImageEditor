@@ -392,7 +392,7 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.线型ToolStripMenuItem.Name = "线型ToolStripMenuItem";
-            this.线型ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.线型ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.线型ToolStripMenuItem.Text = "线型";
             // 
             // toolStripMenuItem2
@@ -440,48 +440,48 @@
             this.toolStripMenuItem10,
             this.toolStripMenuItem11});
             this.起始端ToolStripMenuItem.Name = "起始端ToolStripMenuItem";
-            this.起始端ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.起始端ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.起始端ToolStripMenuItem.Text = "起始端样式";
             // 
             // 无ToolStripMenuItem
             // 
             this.无ToolStripMenuItem.Name = "无ToolStripMenuItem";
-            this.无ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.无ToolStripMenuItem.Size = new System.Drawing.Size(126, 26);
             this.无ToolStripMenuItem.Text = "----";
             this.无ToolStripMenuItem.Click += new System.EventHandler(this.无ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem7.Text = "<---";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem8.Text = "<>--";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem9.Text = "[]---";
             this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem10.Text = "<|--";
             this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem11.Text = "()---";
             this.toolStripMenuItem11.Click += new System.EventHandler(this.toolStripMenuItem11_Click);
             // 
@@ -495,48 +495,48 @@
             this.toolStripMenuItem15,
             this.toolStripMenuItem16});
             this.末尾端ToolStripMenuItem.Name = "末尾端ToolStripMenuItem";
-            this.末尾端ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.末尾端ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.末尾端ToolStripMenuItem.Text = "末尾端样式";
             // 
             // 无ToolStripMenuItem1
             // 
             this.无ToolStripMenuItem1.Name = "无ToolStripMenuItem1";
-            this.无ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.无ToolStripMenuItem1.Size = new System.Drawing.Size(126, 26);
             this.无ToolStripMenuItem1.Text = "----";
             this.无ToolStripMenuItem1.Click += new System.EventHandler(this.无ToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem12.Text = "--->";
             this.toolStripMenuItem12.Click += new System.EventHandler(this.toolStripMenuItem12_Click);
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem13.Text = "--<>";
             this.toolStripMenuItem13.Click += new System.EventHandler(this.toolStripMenuItem13_Click);
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem14.Text = "---[]";
             this.toolStripMenuItem14.Click += new System.EventHandler(this.toolStripMenuItem14_Click);
             // 
             // toolStripMenuItem15
             // 
             this.toolStripMenuItem15.Name = "toolStripMenuItem15";
-            this.toolStripMenuItem15.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem15.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem15.Text = "---|>";
             this.toolStripMenuItem15.Click += new System.EventHandler(this.toolStripMenuItem15_Click);
             // 
             // toolStripMenuItem16
             // 
             this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(126, 26);
             this.toolStripMenuItem16.Text = "---()";
             this.toolStripMenuItem16.Click += new System.EventHandler(this.toolStripMenuItem16_Click);
             // 
@@ -577,6 +577,7 @@
             this.纹理ToolStripMenuItem.Name = "纹理ToolStripMenuItem";
             this.纹理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.纹理ToolStripMenuItem.Text = "纹理";
+            this.纹理ToolStripMenuItem.Click += new System.EventHandler(this.纹理ToolStripMenuItem_Click);
             // 
             // 图片填充ToolStripMenuItem
             // 

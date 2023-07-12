@@ -650,6 +650,17 @@ namespace ouyangxu
         string draw_string = "";
         Font font = new Font("宋体", 12);
 
+        private void 纹理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            oyx_sethatch hatchform = new oyx_sethatch();
+            hatchform.Owner = this;
+            hatchform.ShowDialog();
+            if(colortype == 3)
+            {
+                this.colorfill.BackColor = Color.White;
+            }
+        }
+
         public int ImageWidth
         {
             get { return img.Width; }
@@ -660,6 +671,30 @@ namespace ouyangxu
         {
             get { return img.Height; }
             set { tmp_height = value; }
+        }
+
+        public Color startcolor
+        {
+            get { return start_color; }
+            set { start_color = value; }
+        }
+
+        public Color endcolor
+        {
+            get { return end_color; }
+            set { end_color = value; }
+        }
+
+        public HatchStyle hatchStyle
+        {
+            get { return hatch_style; }
+            set { hatch_style = value; }
+        }
+
+        public int colorType
+        {
+            get { return colortype; }
+            set { colortype = value; }
         }
     }
 }
