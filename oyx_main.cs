@@ -94,6 +94,36 @@ namespace ouyangxu
             else openPicture();
         }
 
+        private void oyx_main_DragEnter(object sender, DragEventArgs e)
+        {
+            if(e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Link;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void oyx_main_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] ss = e.Data.GetData(DataFormats.FileDrop) as string[];
+            if (ss.Length == 0) return;
+            foreach (string s in ss)
+            {
+                string ex = s.Substring(s.LastIndexOf('.') + 1).ToLower();
+                if (ex.Equals("bmp") || ex.Equals("jpg") || ex.Equals("gif") || ex.Equals("png") || ex.Equals("tiff") || ex.Equals("icon")) { 
+                    oyx_main f = new oyx_main(s);
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("不支持的文件格式！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         bool domousemove = false;
         ArrayList array_point = new ArrayList();
         string draw_string = "";
