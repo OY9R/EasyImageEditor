@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -1251,6 +1252,16 @@ namespace ouyangxu
             uncheckallbutten();
             toolStripButton28.Checked = true;
             Cursor = Cursors.Cross;
+        }
+
+        private void 使用说明ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("Firefox", "https://github.com/OY9R/EasyImageEditor");
+        }
+
+        private void 版本信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("Firefox", "https://github.com/OY9R/EasyImageEditor");
         }
 
         public Color endcolor

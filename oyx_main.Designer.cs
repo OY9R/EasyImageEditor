@@ -591,20 +591,22 @@
             this.使用说明ToolStripMenuItem,
             this.版本信息ToolStripMenuItem});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(53, 26);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
             // 使用说明ToolStripMenuItem
             // 
             this.使用说明ToolStripMenuItem.Name = "使用说明ToolStripMenuItem";
-            this.使用说明ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.使用说明ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.使用说明ToolStripMenuItem.Text = "使用说明";
+            this.使用说明ToolStripMenuItem.Click += new System.EventHandler(this.使用说明ToolStripMenuItem_Click);
             // 
             // 版本信息ToolStripMenuItem
             // 
             this.版本信息ToolStripMenuItem.Name = "版本信息ToolStripMenuItem";
-            this.版本信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.版本信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.版本信息ToolStripMenuItem.Text = "版本信息";
+            this.版本信息ToolStripMenuItem.Click += new System.EventHandler(this.版本信息ToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
