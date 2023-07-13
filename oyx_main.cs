@@ -769,13 +769,25 @@ namespace ouyangxu
                 switch (drawselect)
                 {
                     case 1:
-                        Pen pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
                         pen.DashStyle = line_type;
                         pen.StartCap = start_cap;
                         pen.EndCap = end_cap;
                         g.DrawLine(pen, start_point, new Point(e.X, e.Y));
                         break;
-                    // TODO
+                    case 2:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        pen.DashStyle = line_type;
+                        pen.StartCap = start_cap;
+                        pen.EndCap = end_cap;
+                        Point[] drawPoint = new Point[array_point.Count+1];
+                        int i = 0;
+                        foreach(Point p in array_point) drawPoint[i++] = p;
+                        drawPoint[i] = new Point(e.X, e.Y);
+                        array_point.Add(drawPoint[i]);
+                        g.DrawLines(pen, drawPoint);
+                        break;
+                        // TODO
                 }
                 g.Dispose();
             }
@@ -795,13 +807,32 @@ namespace ouyangxu
                         pen.StartCap = start_cap;
                         pen.EndCap = end_cap;
                         g.DrawLine(pen, start_point, new Point(e.X, e.Y));
-                        array_point.Clear();
-                        domousemove = false;
+                        break;
+                    case 2:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        pen.DashStyle = line_type;
+                        pen.StartCap = start_cap;
+                        pen.EndCap = end_cap;
+                        Point[] drawPoint = new Point[array_point.Count + 1];
+                        int i = 0;
+                        foreach (Point p in array_point) drawPoint[i++] = p;
+                        drawPoint[i] = new Point(e.X, e.Y);
+                        g.DrawLines(pen, drawPoint);
                         break;
                     // TODO
                 }
+                domousemove = false;
+                array_point.Clear();
                 g.Dispose();
             }
+        }
+
+        private void toolStripButton20_Click(object sender, EventArgs e)
+        {
+            drawselect = 2;
+            uncheckallbutten();
+            toolStripButton20.Checked = true;
+            Cursor = Cursors.Cross;
         }
 
         public Color endcolor

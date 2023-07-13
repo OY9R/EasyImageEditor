@@ -917,7 +917,7 @@
             this.toolStripButton28});
             this.toolStrip2.Location = new System.Drawing.Point(0, 56);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(30, 415);
+            this.toolStrip2.Size = new System.Drawing.Size(40, 415);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -952,8 +952,9 @@
             this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
             this.toolStripButton20.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton20.Name = "toolStripButton20";
-            this.toolStripButton20.Size = new System.Drawing.Size(27, 24);
+            this.toolStripButton20.Size = new System.Drawing.Size(37, 24);
             this.toolStripButton20.Text = "toolStripButton20";
+            this.toolStripButton20.Click += new System.EventHandler(this.toolStripButton20_Click);
             // 
             // toolStripButton21
             // 
@@ -1043,9 +1044,9 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(30, 56);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(40, 56);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(952, 415);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(942, 415);
             this.flowLayoutPanel1.TabIndex = 4;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
