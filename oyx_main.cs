@@ -724,6 +724,7 @@ namespace ouyangxu
             toolStripButton13.Checked = false;
             toolStripButton14.Checked = false;
             toolStripButton15.Checked = false;
+            toolStripButton16.Checked = false;
             toolStripButton18.Checked = false;
             toolStripButton19.Checked = false;
             toolStripButton20.Checked = false;
@@ -1126,15 +1127,15 @@ namespace ouyangxu
                         }
                         else if (colortype == 2)
                         {
-                            int minx=0,miny=0,maxx=0,maxy=0;
-                            foreach(Point p in array_point)
+                            int minx = 0, miny = 0, maxx = 0, maxy = 0;
+                            foreach (Point p in array_point)
                             {
                                 minx = Math.Min(minx, p.X);
                                 miny = Math.Min(miny, p.Y);
                                 maxx = Math.Max(maxx, p.X);
                                 maxy = Math.Max(maxy, p.Y);
                             }
-                            Rectangle rec = new Rectangle(minx,miny,maxx-minx,maxy-miny);
+                            Rectangle rec = new Rectangle(minx, miny, maxx - minx, maxy - miny);
                             linear_gradient_brush = new LinearGradientBrush(rec, frontcolor, backcolor, linear_gradient_mode);
                             g.FillPolygon(linear_gradient_brush, drawPoint);
                         }
@@ -1261,6 +1262,14 @@ namespace ouyangxu
         private void 版本信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("Firefox", "https://github.com/OY9R/EasyImageEditor");
+        }
+
+        private void toolStripButton16_Click(object sender, EventArgs e)
+        {
+            drawselect = 13;
+            uncheckallbutten();
+            toolStripButton16.Checked = true;
+            Cursor = Cursors.Cross;
         }
 
         public Color endcolor
