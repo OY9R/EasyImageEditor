@@ -799,6 +799,53 @@ namespace ouyangxu
                         //array_point.Add(drawPoint[i]);
                         g.DrawCurve(pen, drawPoint);
                         break;
+                    case 4:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        pen.DashStyle = line_type;
+                        pen.StartCap = start_cap;
+                        pen.EndCap = end_cap;
+                        drawPoint = new Point[array_point.Count + 1];
+                        i = 0;
+                        foreach (Point p in array_point) drawPoint[i++] = p;
+                        drawPoint[i] = new Point(e.X, e.Y);
+                        array_point.Add(drawPoint[i]);
+                        g.DrawLines(pen, drawPoint);
+                        break;
+                    case 7:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        if(e.X == start_point.X || e.Y == start_point.Y)
+                        {
+                            g.DrawLine(pen,start_point,new Point(e.X, e.Y));
+                        }
+                        else
+                        {
+                            int x, y;
+                            x = e.X > start_point.X ? start_point.X : e.X;
+                            y = e.Y > start_point.Y ? start_point.Y : e.Y;
+                            Rectangle rec = new Rectangle(x,y,Math.Abs(e.X-start_point.X),Math.Abs(e.Y-start_point.Y));
+                            if(colortype == 1)
+                            {
+                                solid_brush = new SolidBrush(backcolor);
+                                g.FillEllipse(solid_brush, rec);
+                            }
+                            else if(colortype == 2)
+                            {
+                                linear_gradient_brush = new LinearGradientBrush(rec,frontcolor, backcolor,linear_gradient_mode);
+                                g.FillEllipse(linear_gradient_brush, rec);
+                            }
+                            else if(colortype == 3)
+                            {
+                                hatch_brush = new HatchBrush(hatch_style, frontcolor, backcolor);
+                                g.FillEllipse(hatch_brush, rec);
+                            }
+                            else if (colortype == 4)
+                            {
+                                texture_brush = new TextureBrush(fill_img);
+                                g.FillEllipse(texture_brush, rec);
+                            }
+                            g.DrawEllipse(pen, rec);
+                        }
+                        break;
                         // TODO
                 }
                 g.Dispose();
@@ -832,6 +879,43 @@ namespace ouyangxu
                         foreach (Point p in array_point) drawPoint[i++] = p;
                         drawPoint[i] = new Point(e.X, e.Y);
                         g.DrawLines(pen, drawPoint);
+                        domousemove = false;
+                        array_point.Clear();
+                        break;
+                    case 7:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        if (e.X == start_point.X || e.Y == start_point.Y)
+                        {
+                            g.DrawLine(pen, start_point, new Point(e.X, e.Y));
+                        }
+                        else
+                        {
+                            int x, y;
+                            x = e.X > start_point.X ? start_point.X : e.X;
+                            y = e.Y > start_point.Y ? start_point.Y : e.Y;
+                            Rectangle rec = new Rectangle(x, y, Math.Abs(e.X - start_point.X), Math.Abs(e.Y - start_point.Y));
+                            if (colortype == 1)
+                            {
+                                solid_brush = new SolidBrush(backcolor);
+                                g.FillEllipse(solid_brush, rec);
+                            }
+                            else if (colortype == 2)
+                            {
+                                linear_gradient_brush = new LinearGradientBrush(rec, frontcolor, backcolor, linear_gradient_mode);
+                                g.FillEllipse(linear_gradient_brush, rec);
+                            }
+                            else if (colortype == 3)
+                            {
+                                hatch_brush = new HatchBrush(hatch_style, frontcolor, backcolor);
+                                g.FillEllipse(hatch_brush, rec);
+                            }
+                            else if (colortype == 4)
+                            {
+                                texture_brush = new TextureBrush(fill_img);
+                                g.FillEllipse(texture_brush, rec);
+                            }
+                            g.DrawEllipse(pen, rec);
+                        }
                         domousemove = false;
                         array_point.Clear();
                         break;
@@ -916,6 +1000,22 @@ namespace ouyangxu
         private void toolStripButton15_Click(object sender, EventArgs e)
         {
             逆时针旋转90度ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton22_Click(object sender, EventArgs e)
+        {
+            drawselect = 4;
+            uncheckallbutten();
+            toolStripButton22.Checked = true;
+            Cursor = Cursors.Cross;
+        }
+
+        private void toolStripButton23_Click(object sender, EventArgs e)
+        {
+            drawselect = 7;
+            uncheckallbutten();
+            toolStripButton23.Checked = true;
+            Cursor = Cursors.Cross;
         }
 
         public Color endcolor
