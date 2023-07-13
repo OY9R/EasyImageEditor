@@ -813,27 +813,27 @@ namespace ouyangxu
                         break;
                     case 7:
                         pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
-                        if(e.X == start_point.X || e.Y == start_point.Y)
+                        if (e.X == start_point.X || e.Y == start_point.Y)
                         {
-                            g.DrawLine(pen,start_point,new Point(e.X, e.Y));
+                            g.DrawLine(pen, start_point, new Point(e.X, e.Y));
                         }
                         else
                         {
                             int x, y;
                             x = e.X > start_point.X ? start_point.X : e.X;
                             y = e.Y > start_point.Y ? start_point.Y : e.Y;
-                            Rectangle rec = new Rectangle(x,y,Math.Abs(e.X-start_point.X),Math.Abs(e.Y-start_point.Y));
-                            if(colortype == 1)
+                            Rectangle rec = new Rectangle(x, y, Math.Abs(e.X - start_point.X), Math.Abs(e.Y - start_point.Y));
+                            if (colortype == 1)
                             {
                                 solid_brush = new SolidBrush(backcolor);
                                 g.FillEllipse(solid_brush, rec);
                             }
-                            else if(colortype == 2)
+                            else if (colortype == 2)
                             {
-                                linear_gradient_brush = new LinearGradientBrush(rec,frontcolor, backcolor,linear_gradient_mode);
+                                linear_gradient_brush = new LinearGradientBrush(rec, frontcolor, backcolor, linear_gradient_mode);
                                 g.FillEllipse(linear_gradient_brush, rec);
                             }
-                            else if(colortype == 3)
+                            else if (colortype == 3)
                             {
                                 hatch_brush = new HatchBrush(hatch_style, frontcolor, backcolor);
                                 g.FillEllipse(hatch_brush, rec);
