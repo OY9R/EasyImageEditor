@@ -861,6 +861,56 @@ namespace ouyangxu
                             g.DrawEllipse(pen, rec);
                         }
                         break;
+                    case 9:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        if (e.X == start_point.X || e.Y == start_point.Y)
+                        {
+                            g.DrawLine(pen, start_point, new Point(e.X, e.Y));
+                        }
+                        else
+                        {
+                            int x, y;
+                            x = e.X > start_point.X ? start_point.X : e.X;
+                            y = e.Y > start_point.Y ? start_point.Y : e.Y;
+                            Rectangle rec = new Rectangle(x, y, Math.Abs(e.X - start_point.X), Math.Abs(e.Y - start_point.Y));
+                            if (colortype == 1)
+                            {
+                                solid_brush = new SolidBrush(backcolor);
+                                g.FillRectangle(solid_brush, rec);
+                            }
+                            else if (colortype == 2)
+                            {
+                                linear_gradient_brush = new LinearGradientBrush(rec, frontcolor, backcolor, linear_gradient_mode);
+                                g.FillRectangle(linear_gradient_brush, rec);
+                            }
+                            else if (colortype == 3)
+                            {
+                                hatch_brush = new HatchBrush(hatch_style, frontcolor, backcolor);
+                                g.FillRectangle(hatch_brush, rec);
+                            }
+                            else if (colortype == 4)
+                            {
+                                texture_brush = new TextureBrush(fill_img);
+                                g.FillRectangle(texture_brush, rec);
+                            }
+                            g.DrawRectangle(pen, rec);
+                        }
+                        break;
+                    case 10:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        if (e.X == start_point.X || e.Y == start_point.Y)
+                        {
+                            g.DrawLine(pen, start_point, new Point(e.X, e.Y));
+                        }
+                        else
+                        {
+                            int x, y;
+                            x = e.X > start_point.X ? start_point.X : e.X;
+                            y = e.Y > start_point.Y ? start_point.Y : e.Y;
+                            Rectangle rec = new Rectangle(x, y, Math.Abs(e.X - start_point.X), Math.Abs(e.Y - start_point.Y));
+                            g.DrawRectangle(pen, rec);
+                        }
+                        break;
                         // TODO
                 }
                 g.Dispose();
@@ -947,6 +997,60 @@ namespace ouyangxu
                             y = e.Y > start_point.Y ? start_point.Y : e.Y;
                             Rectangle rec = new Rectangle(x, y, Math.Abs(e.X - start_point.X), Math.Abs(e.Y - start_point.Y));
                             g.DrawEllipse(pen, rec);
+                        }
+                        domousemove = false;
+                        array_point.Clear();
+                        break;
+                    case 9:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        if (e.X == start_point.X || e.Y == start_point.Y)
+                        {
+                            g.DrawLine(pen, start_point, new Point(e.X, e.Y));
+                        }
+                        else
+                        {
+                            int x, y;
+                            x = e.X > start_point.X ? start_point.X : e.X;
+                            y = e.Y > start_point.Y ? start_point.Y : e.Y;
+                            Rectangle rec = new Rectangle(x, y, Math.Abs(e.X - start_point.X), Math.Abs(e.Y - start_point.Y));
+                            if (colortype == 1)
+                            {
+                                solid_brush = new SolidBrush(backcolor);
+                                g.FillRectangle(solid_brush, rec);
+                            }
+                            else if (colortype == 2)
+                            {
+                                linear_gradient_brush = new LinearGradientBrush(rec, frontcolor, backcolor, linear_gradient_mode);
+                                g.FillRectangle(linear_gradient_brush, rec);
+                            }
+                            else if (colortype == 3)
+                            {
+                                hatch_brush = new HatchBrush(hatch_style, frontcolor, backcolor);
+                                g.FillRectangle(hatch_brush, rec);
+                            }
+                            else if (colortype == 4)
+                            {
+                                texture_brush = new TextureBrush(fill_img);
+                                g.FillRectangle(texture_brush, rec);
+                            }
+                            g.DrawRectangle(pen, rec);
+                        }
+                        domousemove = false;
+                        array_point.Clear();
+                        break;
+                    case 10:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        if (e.X == start_point.X || e.Y == start_point.Y)
+                        {
+                            g.DrawLine(pen, start_point, new Point(e.X, e.Y));
+                        }
+                        else
+                        {
+                            int x, y;
+                            x = e.X > start_point.X ? start_point.X : e.X;
+                            y = e.Y > start_point.Y ? start_point.Y : e.Y;
+                            Rectangle rec = new Rectangle(x, y, Math.Abs(e.X - start_point.X), Math.Abs(e.Y - start_point.Y));
+                            g.DrawRectangle(pen, rec);
                         }
                         domousemove = false;
                         array_point.Clear();
@@ -1055,6 +1159,22 @@ namespace ouyangxu
             drawselect = 8;
             uncheckallbutten();
             toolStripButton24.Checked = true;
+            Cursor = Cursors.Cross;
+        }
+
+        private void toolStripButton25_Click(object sender, EventArgs e)
+        {
+            drawselect = 9;
+            uncheckallbutten();
+            toolStripButton25.Checked = true;
+            Cursor = Cursors.Cross;
+        }
+
+        private void toolStripButton26_Click(object sender, EventArgs e)
+        {
+            drawselect = 10;
+            uncheckallbutten();
+            toolStripButton26.Checked = true;
             Cursor = Cursors.Cross;
         }
 
