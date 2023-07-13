@@ -656,7 +656,7 @@ namespace ouyangxu
             oyx_sethatch hatchform = new oyx_sethatch();
             hatchform.Owner = this;
             hatchform.ShowDialog();
-            if(colortype == 3)
+            if (colortype == 3)
             {
                 colorfill.Text = "纹理";
                 colorfill.BackColor = Color.White;
@@ -704,6 +704,103 @@ namespace ouyangxu
                 colorfill.Text = "图片";
                 colorfill.BackColor = Color.White;
                 colortype = 4;
+            }
+        }
+
+        private void uncheckallbutten()
+        {
+            toolStripButton1.Checked = false;
+            toolStripButton2.Checked = false;
+            toolStripButton3.Checked = false;
+            toolStripButton4.Checked = false;
+            toolStripButton5.Checked = false;
+            toolStripButton6.Checked = false;
+            toolStripButton7.Checked = false;
+            toolStripButton8.Checked = false;
+            toolStripButton9.Checked = false;
+            toolStripButton10.Checked = false;
+            toolStripButton11.Checked = false;
+            toolStripButton12.Checked = false;
+            toolStripButton13.Checked = false;
+            toolStripButton14.Checked = false;
+            toolStripButton15.Checked = false;
+            toolStripButton18.Checked = false;
+            toolStripButton19.Checked = false;
+            toolStripButton20.Checked = false;
+            toolStripButton21.Checked = false;
+            toolStripButton22.Checked = false;
+            toolStripButton23.Checked = false;
+            toolStripButton24.Checked = false;
+            toolStripButton25.Checked = false;
+            toolStripButton26.Checked = false;
+            toolStripButton27.Checked = false;
+            toolStripButton28.Checked = false;
+        }
+
+        private void toolStripButton19_Click(object sender, EventArgs e)
+        {
+            drawselect = 1;
+            uncheckallbutten();
+            toolStripButton19.Checked = true;
+            Cursor = Cursors.Cross;
+        }
+
+        private void toolStripButton18_Click(object sender, EventArgs e)
+        {
+            drawselect = 0;
+            uncheckallbutten();
+            Cursor = Cursors.Default;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (drawselect == 0) return;
+            start_point = new Point(e.X, e.Y);
+            array_point.Add(start_point);
+            domousemove = true;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (domousemove)
+            {
+                pictureBox1.Image = (Bitmap)img.Clone();
+                Graphics g = Graphics.FromImage(pictureBox1.Image);
+                switch (drawselect)
+                {
+                    case 1:
+                        Pen pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        pen.DashStyle = line_type;
+                        pen.StartCap = start_cap;
+                        pen.EndCap = end_cap;
+                        g.DrawLine(pen, start_point, new Point(e.X, e.Y));
+                        break;
+                    // TODO
+                }
+                g.Dispose();
+            }
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (domousemove)
+            {
+                pictureBox1.Image = img;
+                Graphics g = Graphics.FromImage(img);
+                switch (drawselect)
+                {
+                    case 1:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        pen.DashStyle = line_type;
+                        pen.StartCap = start_cap;
+                        pen.EndCap = end_cap;
+                        g.DrawLine(pen, start_point, new Point(e.X, e.Y));
+                        array_point.Clear();
+                        domousemove = false;
+                        break;
+                    // TODO
+                }
+                g.Dispose();
             }
         }
 

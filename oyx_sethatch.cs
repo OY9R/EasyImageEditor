@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ouyangxu
@@ -75,7 +69,7 @@ namespace ouyangxu
             ColorDialog cd = new ColorDialog();
             cd.AllowFullOpen = true;
             cd.Color = this.button1.BackColor;
-            if(cd.ShowDialog() == DialogResult.OK)
+            if (cd.ShowDialog() == DialogResult.OK)
             {
                 this.button1.BackColor = cd.Color;
                 preview();
