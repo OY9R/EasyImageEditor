@@ -26,7 +26,7 @@ namespace ouyangxu
         DashStyle line_type;
         LineCap start_cap, end_cap;
         int colortype;
-        Color line_color, start_color, end_color, front_color, back_color;
+        Color line_color = Color.Black, start_color = Color.Black, end_color = Color.Red, front_color = Color.Black, back_color = Color.Red;
         Bitmap fill_img = null;
         LinearGradientMode linear_gradient_mode;
         HatchStyle hatch_style;
@@ -417,13 +417,12 @@ namespace ouyangxu
 
         private void Laplacian(double[] Laplacian)
         {
-            Bitmap myBitmap = new Bitmap(pictureBox1.Image);
-            //建立拉普拉斯模板
+            if (img == null) return;
             Color pixel;
             //这里注意边界的像素暂不处理，否则超出数组范围
-            for (int i = 1; i < myBitmap.Width - 1; i++)
+            for (int i = 1; i < img.Width - 1; i++)
             {
-                for (int j = 1; j < myBitmap.Height - 1; j++)
+                for (int j = 1; j < img.Height - 1; j++)
                 {
                     int red = 0, green = 0, blue = 0;
                     int index = 0;
@@ -431,7 +430,7 @@ namespace ouyangxu
                     {
                         for (int row = -1; row <= 1; row++)
                         {
-                            pixel = myBitmap.GetPixel(i + row, j + col);
+                            pixel = img.GetPixel(i + row, j + col);
                             red += (int)(pixel.R * Laplacian[index]);
                             green += (int)(pixel.G * Laplacian[index]);
                             blue += (int)(pixel.B * Laplacian[index]);
@@ -444,10 +443,10 @@ namespace ouyangxu
                     if (green < 0) green = 0;
                     if (blue > 255) blue = 255;
                     if (blue < 0) blue = 0;
-                    myBitmap.SetPixel(i - 1, j - 1, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
+                    img.SetPixel(i - 1, j - 1, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
                 }
             }
-            pictureBox1.Image = myBitmap;
+            pictureBox1.Image = img;
         }
 
         private void 柔化ToolStripMenuItem_Click(object sender, EventArgs e)

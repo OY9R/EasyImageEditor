@@ -825,10 +825,11 @@
             // 
             // colorshow
             // 
+            this.colorshow.BackColor = System.Drawing.Color.Black;
             this.colorshow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.colorshow.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.colorshow.Name = "colorshow";
-            this.colorshow.Size = new System.Drawing.Size(29, 28);
+            this.colorshow.Size = new System.Drawing.Size(29, 25);
             this.colorshow.Text = "toolStripButton16";
             this.colorshow.Click += new System.EventHandler(this.colorshow_Click);
             // 
@@ -845,10 +846,11 @@
             // 
             // colorfill
             // 
+            this.colorfill.BackColor = System.Drawing.Color.Red;
             this.colorfill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.colorfill.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.colorfill.Name = "colorfill";
-            this.colorfill.Size = new System.Drawing.Size(29, 28);
+            this.colorfill.Size = new System.Drawing.Size(29, 25);
             this.colorfill.Text = "toolStripButton17";
             this.colorfill.Click += new System.EventHandler(this.colorfill_Click);
             // 
