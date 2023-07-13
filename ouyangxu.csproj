@@ -92,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,9 +103,398 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Images.rar" />
+    <None Include="Resources\xp_icons.rar" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{8BFE8E9F-6795-4595-AF3E-EEEFEB4D5274}0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{26943F7A-3DF8-49EB-BBF9-1A46B75C9B56}.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0d0542f5f45cf9fc7273abd11cf5c0ee.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.tiff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\154132.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\154133.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\154144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alert.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bartop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boardicon_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boardicon_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boardicon_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_normal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnsearch_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_back.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_clear.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categoryOpen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\denglu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dxtexdoc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipse.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ellipsefill.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guanbi.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\head.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hover.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_arrowR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_online_default.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_search.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input1_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jefthloading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jefthtesting.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kankan.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\List_title.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_ico_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_ico_4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minidel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mousemenubg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\my_3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\n.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav_button_off.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav_button_on.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-folder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-folder2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poker.wan.360.cn_favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pre3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\real.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rectfill.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rorate90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotait1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotait2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruihua.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-ico.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shenhe.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\snap.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spiral.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spiral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sysloading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_top.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tablecellsplit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_class_off.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_class_on.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_back_off.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_back_on.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_exit_off.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_exit_on.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_next_off.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_next_on.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_save_off.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testctrl_save_on.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testschedule.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tijiao.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top_bg023410.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top_bg023411.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\top_bg023413.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topmenu_close.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topmenu_close_on.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\urorate90.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\w.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\www.95599.cn_favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\www.google.cn_favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\www.qihoo.com_favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xiugai.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{1B64FB54-3FFD-418F-91D2-665E78342241}0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{4AEFCF44-C46F-4656-82F9-742BAD3D11E5}0.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

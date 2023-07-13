@@ -780,9 +780,9 @@ namespace ouyangxu
                         pen.DashStyle = line_type;
                         pen.StartCap = start_cap;
                         pen.EndCap = end_cap;
-                        Point[] drawPoint = new Point[array_point.Count+1];
+                        Point[] drawPoint = new Point[array_point.Count + 1];
                         int i = 0;
-                        foreach(Point p in array_point) drawPoint[i++] = p;
+                        foreach (Point p in array_point) drawPoint[i++] = p;
                         drawPoint[i] = new Point(e.X, e.Y);
                         //array_point.Add(drawPoint[i]);
                         g.DrawLines(pen, drawPoint);
@@ -835,7 +835,7 @@ namespace ouyangxu
                         domousemove = false;
                         array_point.Clear();
                         break;
-                    // TODO
+                        // TODO
                 }
                 g.Dispose();
             }
@@ -851,7 +851,7 @@ namespace ouyangxu
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            if(domousemove)
+            if (domousemove)
             {
                 pictureBox1.Image = img;
                 Graphics g = Graphics.FromImage(img);
@@ -891,6 +891,31 @@ namespace ouyangxu
             uncheckallbutten();
             toolStripButton21.Checked = true;
             Cursor = Cursors.Cross;
+        }
+
+        private void toolStripButton11_Click_1(object sender, EventArgs e)
+        {
+            柔化ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            水平翻转ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton13_Click(object sender, EventArgs e)
+        {
+            垂直翻转ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton14_Click(object sender, EventArgs e)
+        {
+            顺时针旋转90度ToolStripMenuItem_Click(sender, e);
+        }
+
+        private void toolStripButton15_Click(object sender, EventArgs e)
+        {
+            逆时针旋转90度ToolStripMenuItem_Click(sender, e);
         }
 
         public Color endcolor
