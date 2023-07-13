@@ -911,6 +911,22 @@ namespace ouyangxu
                             g.DrawRectangle(pen, rec);
                         }
                         break;
+                    case 11:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        drawPoint = new Point[array_point.Count + 1];
+                        i = 0;
+                        foreach (Point p in array_point) drawPoint[i++] = p;
+                        drawPoint[i] = new Point(e.X, e.Y);
+                        g.DrawLines(pen, drawPoint);
+                        break;
+                    case 12:
+                        pen = new Pen(line_color, float.Parse(toolStripSplitButton1.Text));
+                        drawPoint = new Point[array_point.Count + 1];
+                        i = 0;
+                        foreach (Point p in array_point) drawPoint[i++] = p;
+                        drawPoint[i] = new Point(e.X, e.Y);
+                        g.DrawLines(pen, drawPoint);
+                        break;
                         // TODO
                 }
                 g.Dispose();
@@ -1097,6 +1113,49 @@ namespace ouyangxu
                         foreach (Point p in array_point) drawPoint[++i] = p;
                         g.DrawCurve(pen, drawPoint);
                         break;
+                    case 11:
+                        array_point.RemoveAt(array_point.Count - 1);
+                        drawPoint = new Point[array_point.Count];
+                        i = 0;
+                        foreach (Point p in array_point) drawPoint[i++] = p;
+                        g.DrawPolygon(pen, drawPoint);
+                        if (colortype == 1)
+                        {
+                            solid_brush = new SolidBrush(back_color);
+                            g.FillPolygon(solid_brush, drawPoint);
+                        }
+                        else if (colortype == 2)
+                        {
+                            int minx=0,miny=0,maxx=0,maxy=0;
+                            foreach(Point p in array_point)
+                            {
+                                minx = Math.Min(minx, p.X);
+                                miny = Math.Min(miny, p.Y);
+                                maxx = Math.Max(maxx, p.X);
+                                maxy = Math.Max(maxy, p.Y);
+                            }
+                            Rectangle rec = new Rectangle(minx,miny,maxx-minx,maxy-miny);
+                            linear_gradient_brush = new LinearGradientBrush(rec, frontcolor, backcolor, linear_gradient_mode);
+                            g.FillPolygon(linear_gradient_brush, drawPoint);
+                        }
+                        else if (colortype == 3)
+                        {
+                            hatch_brush = new HatchBrush(hatch_style, frontcolor, backcolor);
+                            g.FillPolygon(hatch_brush, drawPoint);
+                        }
+                        else if (colortype == 4)
+                        {
+                            texture_brush = new TextureBrush(fill_img);
+                            g.FillPolygon(texture_brush, drawPoint);
+                        }
+                        break;
+                    case 12:
+                        array_point.RemoveAt(array_point.Count - 1);
+                        drawPoint = new Point[array_point.Count];
+                        i = 0;
+                        foreach (Point p in array_point) drawPoint[i++] = p;
+                        g.DrawPolygon(pen, drawPoint);
+                        break;
                         // TODO
                 }
                 domousemove = false;
@@ -1175,6 +1234,22 @@ namespace ouyangxu
             drawselect = 10;
             uncheckallbutten();
             toolStripButton26.Checked = true;
+            Cursor = Cursors.Cross;
+        }
+
+        private void toolStripButton27_Click(object sender, EventArgs e)
+        {
+            drawselect = 11;
+            uncheckallbutten();
+            toolStripButton27.Checked = true;
+            Cursor = Cursors.Cross;
+        }
+
+        private void toolStripButton28_Click(object sender, EventArgs e)
+        {
+            drawselect = 12;
+            uncheckallbutten();
+            toolStripButton28.Checked = true;
             Cursor = Cursors.Cross;
         }
 

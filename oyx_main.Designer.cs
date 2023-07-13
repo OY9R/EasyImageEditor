@@ -1043,8 +1043,9 @@
             this.toolStripButton27.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton27.Image")));
             this.toolStripButton27.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton27.Name = "toolStripButton27";
-            this.toolStripButton27.Size = new System.Drawing.Size(27, 24);
+            this.toolStripButton27.Size = new System.Drawing.Size(37, 24);
             this.toolStripButton27.Text = "toolStripButton27";
+            this.toolStripButton27.Click += new System.EventHandler(this.toolStripButton27_Click);
             // 
             // toolStripButton28
             // 
@@ -1052,8 +1053,9 @@
             this.toolStripButton28.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton28.Image")));
             this.toolStripButton28.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton28.Name = "toolStripButton28";
-            this.toolStripButton28.Size = new System.Drawing.Size(27, 24);
+            this.toolStripButton28.Size = new System.Drawing.Size(37, 24);
             this.toolStripButton28.Text = "toolStripButton28";
+            this.toolStripButton28.Click += new System.EventHandler(this.toolStripButton28_Click);
             // 
             // pictureBox1
             // 
