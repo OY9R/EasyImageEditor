@@ -48,8 +48,8 @@ namespace ouyangxu
         private void oyx_sethatch_Load(object sender, EventArgs e)
         {
             ff = (oyx_main)this.Owner;
-            this.button1.BackColor = ff.startcolor;
-            this.button2.BackColor = ff.endcolor;
+            this.button1.BackColor = ff.frontcolor;
+            this.button2.BackColor = ff.backcolor;
             for (int i = 0; i < hss.Length; i++)
             {
                 this.comboBox1.Items.Add(hss[i].ToString());
@@ -60,7 +60,7 @@ namespace ouyangxu
         private void preview()
         {
             Graphics g = this.CreateGraphics();
-            Rectangle rec = new Rectangle(202, 115, 90, 60);
+            Rectangle rec = new Rectangle(180, 100, 100, 80);
             HatchBrush hb = new HatchBrush(hss[comboBox1.SelectedIndex], button1.BackColor, button2.BackColor);
             g.FillEllipse(hb, rec);
         }
@@ -96,10 +96,15 @@ namespace ouyangxu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ff.startcolor = this.button1.BackColor;
-            ff.endcolor = this.button2.BackColor;
+            ff.frontcolor = this.button1.BackColor;
+            ff.backcolor = this.button2.BackColor;
             ff.hatchStyle = hss[comboBox1.SelectedIndex];
             ff.colorType = 3;
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

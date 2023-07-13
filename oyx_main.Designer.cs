@@ -392,7 +392,7 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.线型ToolStripMenuItem.Name = "线型ToolStripMenuItem";
-            this.线型ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.线型ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.线型ToolStripMenuItem.Text = "线型";
             // 
             // toolStripMenuItem2
@@ -440,7 +440,7 @@
             this.toolStripMenuItem10,
             this.toolStripMenuItem11});
             this.起始端ToolStripMenuItem.Name = "起始端ToolStripMenuItem";
-            this.起始端ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.起始端ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.起始端ToolStripMenuItem.Text = "起始端样式";
             // 
             // 无ToolStripMenuItem
@@ -495,7 +495,7 @@
             this.toolStripMenuItem15,
             this.toolStripMenuItem16});
             this.末尾端ToolStripMenuItem.Name = "末尾端ToolStripMenuItem";
-            this.末尾端ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.末尾端ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.末尾端ToolStripMenuItem.Text = "末尾端样式";
             // 
             // 无ToolStripMenuItem1
@@ -571,6 +571,7 @@
             this.渐变色ToolStripMenuItem.Name = "渐变色ToolStripMenuItem";
             this.渐变色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.渐变色ToolStripMenuItem.Text = "渐变色";
+            this.渐变色ToolStripMenuItem.Click += new System.EventHandler(this.渐变色ToolStripMenuItem_Click);
             // 
             // 纹理ToolStripMenuItem
             // 
@@ -584,6 +585,7 @@
             this.图片填充ToolStripMenuItem.Name = "图片填充ToolStripMenuItem";
             this.图片填充ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.图片填充ToolStripMenuItem.Text = "图片填充";
+            this.图片填充ToolStripMenuItem.Click += new System.EventHandler(this.图片填充ToolStripMenuItem_Click);
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -821,7 +823,6 @@
             // colorshow
             // 
             this.colorshow.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.colorshow.Image = ((System.Drawing.Image)(resources.GetObject("colorshow.Image")));
             this.colorshow.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.colorshow.Name = "colorshow";
             this.colorshow.Size = new System.Drawing.Size(29, 24);
@@ -842,7 +843,6 @@
             // colorfill
             // 
             this.colorfill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.colorfill.Image = ((System.Drawing.Image)(resources.GetObject("colorfill.Image")));
             this.colorfill.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.colorfill.Name = "colorfill";
             this.colorfill.Size = new System.Drawing.Size(29, 24);

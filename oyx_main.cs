@@ -634,6 +634,7 @@ namespace ouyangxu
             colorDialog.Color = colorfill.BackColor;
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
+                colorfill.Text = "";
                 colorfill.BackColor = colorDialog.Color;
                 back_color = colorDialog.Color;
                 colortype = 1;
@@ -657,7 +658,8 @@ namespace ouyangxu
             hatchform.ShowDialog();
             if(colortype == 3)
             {
-                this.colorfill.BackColor = Color.White;
+                colorfill.Text = "纹理";
+                colorfill.BackColor = Color.White;
             }
         }
 
@@ -679,10 +681,48 @@ namespace ouyangxu
             set { start_color = value; }
         }
 
+        private void 渐变色ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            oyx_setgradient setgradient = new oyx_setgradient();
+            setgradient.Owner = this;
+            setgradient.ShowDialog();
+            if (colortype == 2)
+            {
+                colorfill.Text = "渐变";
+                colorfill.BackColor = Color.White;
+            }
+        }
+
+        private void 图片填充ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "图片文件(*.jpg,*.bmp,*.png)|*.jpg;*.bmp;*.png";
+            openFileDialog.Title = "打开图片文件";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                fill_img = (Bitmap)Image.FromFile(openFileDialog.FileName);
+                colorfill.Text = "图片";
+                colorfill.BackColor = Color.White;
+                colortype = 4;
+            }
+        }
+
         public Color endcolor
         {
             get { return end_color; }
             set { end_color = value; }
+        }
+
+        public Color frontcolor
+        {
+            get { return front_color; }
+            set { front_color = value; }
+        }
+
+        public Color backcolor
+        {
+            get { return back_color; }
+            set { back_color = value; }
         }
 
         public HatchStyle hatchStyle
@@ -695,6 +735,12 @@ namespace ouyangxu
         {
             get { return colortype; }
             set { colortype = value; }
+        }
+
+        public LinearGradientMode linearGradientMode
+        {
+            get { return linear_gradient_mode; }
+            set { linear_gradient_mode = value; }
         }
     }
 }
