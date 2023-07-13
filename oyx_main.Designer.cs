@@ -114,8 +114,10 @@
             this.colorfill = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -135,8 +137,6 @@
             this.toolStripButton28 = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -392,7 +392,7 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.线型ToolStripMenuItem.Name = "线型ToolStripMenuItem";
-            this.线型ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.线型ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.线型ToolStripMenuItem.Text = "线型";
             // 
             // toolStripMenuItem2
@@ -440,7 +440,7 @@
             this.toolStripMenuItem10,
             this.toolStripMenuItem11});
             this.起始端ToolStripMenuItem.Name = "起始端ToolStripMenuItem";
-            this.起始端ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.起始端ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.起始端ToolStripMenuItem.Text = "起始端样式";
             // 
             // 无ToolStripMenuItem
@@ -495,7 +495,7 @@
             this.toolStripMenuItem15,
             this.toolStripMenuItem16});
             this.末尾端ToolStripMenuItem.Name = "末尾端ToolStripMenuItem";
-            this.末尾端ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.末尾端ToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.末尾端ToolStripMenuItem.Text = "末尾端样式";
             // 
             // 无ToolStripMenuItem1
@@ -555,35 +555,35 @@
             // 线条颜色ToolStripMenuItem
             // 
             this.线条颜色ToolStripMenuItem.Name = "线条颜色ToolStripMenuItem";
-            this.线条颜色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.线条颜色ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.线条颜色ToolStripMenuItem.Text = "线条颜色";
             this.线条颜色ToolStripMenuItem.Click += new System.EventHandler(this.线条颜色ToolStripMenuItem_Click);
             // 
             // 填充色ToolStripMenuItem
             // 
             this.填充色ToolStripMenuItem.Name = "填充色ToolStripMenuItem";
-            this.填充色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.填充色ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.填充色ToolStripMenuItem.Text = "填充色";
             this.填充色ToolStripMenuItem.Click += new System.EventHandler(this.填充色ToolStripMenuItem_Click);
             // 
             // 渐变色ToolStripMenuItem
             // 
             this.渐变色ToolStripMenuItem.Name = "渐变色ToolStripMenuItem";
-            this.渐变色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.渐变色ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.渐变色ToolStripMenuItem.Text = "渐变色";
             this.渐变色ToolStripMenuItem.Click += new System.EventHandler(this.渐变色ToolStripMenuItem_Click);
             // 
             // 纹理ToolStripMenuItem
             // 
             this.纹理ToolStripMenuItem.Name = "纹理ToolStripMenuItem";
-            this.纹理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.纹理ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.纹理ToolStripMenuItem.Text = "纹理";
             this.纹理ToolStripMenuItem.Click += new System.EventHandler(this.纹理ToolStripMenuItem_Click);
             // 
             // 图片填充ToolStripMenuItem
             // 
             this.图片填充ToolStripMenuItem.Name = "图片填充ToolStripMenuItem";
-            this.图片填充ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.图片填充ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.图片填充ToolStripMenuItem.Text = "图片填充";
             this.图片填充ToolStripMenuItem.Click += new System.EventHandler(this.图片填充ToolStripMenuItem_Click);
             // 
@@ -860,6 +860,32 @@
             this.toolStripLabel3.Size = new System.Drawing.Size(39, 25);
             this.toolStripLabel3.Text = "线宽";
             // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.AutoCompleteCustomSource.AddRange(new string[] {
+            "1",
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "128",
+            "256"});
+            this.toolStripSplitButton1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "128",
+            "256"});
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(75, 28);
+            this.toolStripSplitButton1.Text = "1";
+            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
@@ -870,6 +896,12 @@
             this.toolStripLabel4.Name = "toolStripLabel4";
             this.toolStripLabel4.Size = new System.Drawing.Size(39, 25);
             this.toolStripLabel4.Text = "线型";
+            // 
+            // toolStripSplitButton2
+            // 
+            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
+            this.toolStripSplitButton2.Size = new System.Drawing.Size(75, 28);
+            this.toolStripSplitButton2.Text = "toolStripSplitButton2";
             // 
             // toolStripSeparator8
             // 
@@ -952,7 +984,7 @@
             this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
             this.toolStripButton20.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton20.Name = "toolStripButton20";
-            this.toolStripButton20.Size = new System.Drawing.Size(37, 24);
+            this.toolStripButton20.Size = new System.Drawing.Size(27, 24);
             this.toolStripButton20.Text = "toolStripButton20";
             this.toolStripButton20.Click += new System.EventHandler(this.toolStripButton20_Click);
             // 
@@ -962,8 +994,9 @@
             this.toolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton21.Image")));
             this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton21.Name = "toolStripButton21";
-            this.toolStripButton21.Size = new System.Drawing.Size(27, 24);
+            this.toolStripButton21.Size = new System.Drawing.Size(37, 24);
             this.toolStripButton21.Text = "toolStripButton21";
+            this.toolStripButton21.Click += new System.EventHandler(this.toolStripButton21_Click);
             // 
             // toolStripButton22
             // 
@@ -1035,6 +1068,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(850, 365);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
@@ -1049,38 +1083,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(942, 415);
             this.flowLayoutPanel1.TabIndex = 4;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.AutoCompleteCustomSource.AddRange(new string[] {
-            "1",
-            "2",
-            "4",
-            "8",
-            "16",
-            "32",
-            "64",
-            "128",
-            "256"});
-            this.toolStripSplitButton1.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "4",
-            "8",
-            "16",
-            "32",
-            "64",
-            "128",
-            "256"});
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(75, 28);
-            this.toolStripSplitButton1.Text = "1";
-            // 
-            // toolStripSplitButton2
-            // 
-            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(75, 28);
-            this.toolStripSplitButton2.Text = "toolStripSplitButton2";
             // 
             // oyx_main
             // 
