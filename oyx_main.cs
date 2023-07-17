@@ -38,6 +38,7 @@ namespace ouyangxu
         TextureBrush texture_brush;
         int drawselect = 0;
         Point start_point;
+        Font text_font = new Font("宋体",50);
 
         private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -356,13 +357,12 @@ namespace ouyangxu
         private void 浮雕ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (img == null) return;
-            Bitmap myBitmap = new Bitmap(pictureBox1.Image);//创建Bitmap对象：提取像素信息，转化为二维数组
-            for (int i = 0; i < myBitmap.Width - 1; i++)
+            for (int i = 0; i < img.Width - 1; i++)
             {
-                for (int j = 0; j < myBitmap.Height - 1; j++)
+                for (int j = 0; j < img.Height - 1; j++)
                 {
-                    Color Color1 = myBitmap.GetPixel(i, j);//调用GetPixel方法获得像素点颜色
-                    Color Color2 = myBitmap.GetPixel(i + 1, j + 1);
+                    Color Color1 = img.GetPixel(i, j);//调用GetPixel方法获得像素点颜色
+                    Color Color2 = img.GetPixel(i + 1, j + 1);
                     int red = Math.Abs(Color1.R - Color2.R + 128); //调用绝对值Abs函数
                     //颜色处理
                     int green = Math.Abs(Color1.G - Color2.G + 128);
@@ -374,10 +374,10 @@ namespace ouyangxu
                     if (blue > 255) blue = 255;
                     if (blue < 0) blue = 0;
                     //用SetPixel()方法设置像素点颜色
-                    myBitmap.SetPixel(i, j, Color.FromArgb(red, green, blue));
+                    img.SetPixel(i, j, Color.FromArgb(red, green, blue));
                 }
             }
-            pictureBox1.Image = myBitmap;
+            pictureBox1.Image = img;
         }
 
         private void 黑白ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -463,46 +463,46 @@ namespace ouyangxu
 
         private void 雾化ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bitmap myBitmap = new Bitmap(pictureBox1.Image);
+            if (img == null) return;
             Random random = new Random();
             Color pixel;
             //这里注意边界的像素暂不处理，否则超出数组范围
-            for (int i = 3; i < myBitmap.Width - 3; i++)
+            for (int i = 3; i < img.Width - 3; i++)
             {
-                for (int j = 3; j < myBitmap.Height - 3; j++)
+                for (int j = 3; j < img.Height - 3; j++)
                 {
                     int red = 0, green = 0, blue = 0;
-                    pixel = myBitmap.GetPixel(i + random.Next() % 7 - 3, j + random.Next() % 7 - 3);
+                    pixel = img.GetPixel(i + random.Next() % 7 - 3, j + random.Next() % 7 - 3);
                     red = pixel.R; green = pixel.G; blue = pixel.B;
-                    myBitmap.SetPixel(i - 1, j - 1, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
+                    img.SetPixel(i - 1, j - 1, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
                 }
             }
-            pictureBox1.Image = myBitmap;
+            pictureBox1.Image = img;
         }
 
         private void 马赛克效果ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Bitmap myBitmap = new Bitmap(pictureBox1.Image);
+            if(img == null ) return;
             Random random = new Random();
             Color pixel;
             //这里注意边界的像素暂不处理，否则超出数组范围
-            for (int i = 3; i < myBitmap.Width - 3; i += 7)
+            for (int i = 3; i < img.Width - 3; i += 7)
             {
-                for (int j = 3; j < myBitmap.Height - 3; j += 7)
+                for (int j = 3; j < img.Height - 3; j += 7)
                 {
                     int red = 0, green = 0, blue = 0;
-                    pixel = myBitmap.GetPixel(i, j);
+                    pixel = img.GetPixel(i, j);
                     red = pixel.R; green = pixel.G; blue = pixel.B;
                     for (int k = -3; k <= 3; k++)
                     {
                         for (int l = -3; l <= 3; l++)
                         {
-                            myBitmap.SetPixel(i + k, j + l, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
+                            img.SetPixel(i + k, j + l, Color.FromArgb((int)red, (int)green, (int)blue)); //这里注意是i-1,j-1，否则效果很糟糕
                         }
                     }
                 }
             }
-            pictureBox1.Image = myBitmap;
+            pictureBox1.Image = img;
         }
 
         private void toolStripButton8_Click(object sender, EventArgs e)
@@ -741,6 +741,7 @@ namespace ouyangxu
             toolStripButton26.Checked = false;
             toolStripButton27.Checked = false;
             toolStripButton28.Checked = false;
+            panel1.Visible = false;
         }
 
         private void toolStripButton19_Click(object sender, EventArgs e)
@@ -754,6 +755,7 @@ namespace ouyangxu
         private void toolStripButton18_Click(object sender, EventArgs e)
         {
             drawselect = 0;
+            domousemove = false;
             uncheckallbutten();
             Cursor = Cursors.Default;
         }
@@ -932,6 +934,10 @@ namespace ouyangxu
                         foreach (Point p in array_point) drawPoint[i++] = p;
                         drawPoint[i] = new Point(e.X, e.Y);
                         g.DrawLines(pen, drawPoint);
+                        break;
+                    case 13:
+                        start_point = new Point(e.X, e.Y);
+                        g.DrawString(textBox1.Text, text_font, new SolidBrush(frontcolor), start_point);
                         break;
                         // TODO
                 }
@@ -1274,6 +1280,9 @@ namespace ouyangxu
             drawselect = 13;
             uncheckallbutten();
             toolStripButton16.Checked = true;
+            panel1.Visible = true;
+            domousemove = true;
+            start_point = new Point(0, 0);
             Cursor = Cursors.Cross;
         }
 
@@ -1292,6 +1301,44 @@ namespace ouyangxu
                 DashStyle.Dot
             };
             line_type = dashStyles[toolStripComboBox1.SelectedIndex];
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            showText();
+        }
+
+        private void showText()
+        {
+            if (img == null || textBox1.Text.Length == 0) return;
+            pictureBox1.Image = (Bitmap)img.Clone();
+            Graphics g = Graphics.FromImage(pictureBox1.Image);
+            g.DrawString(textBox1.Text, text_font, new SolidBrush(frontcolor), start_point);
+            g.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FontDialog fontDialog1 = new FontDialog();
+            fontDialog1.Font = text_font;
+            if(fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                text_font = fontDialog1.Font;
+            }
+            showText();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (drawselect == 13)
+            {
+                pictureBox1.Image = img;
+                Graphics g = Graphics.FromImage(img);
+                g.DrawString(textBox1.Text, text_font, new SolidBrush(frontcolor), start_point);
+                array_point.Clear();
+                domousemove = false;
+                toolStripButton18_Click(sender, e);
+            }
         }
 
         public Color endcolor
