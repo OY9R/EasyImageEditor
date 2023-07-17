@@ -285,91 +285,91 @@
             // 水平翻转ToolStripMenuItem
             // 
             this.水平翻转ToolStripMenuItem.Name = "水平翻转ToolStripMenuItem";
-            this.水平翻转ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.水平翻转ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.水平翻转ToolStripMenuItem.Text = "水平翻转";
             this.水平翻转ToolStripMenuItem.Click += new System.EventHandler(this.水平翻转ToolStripMenuItem_Click);
             // 
             // 垂直翻转ToolStripMenuItem
             // 
             this.垂直翻转ToolStripMenuItem.Name = "垂直翻转ToolStripMenuItem";
-            this.垂直翻转ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.垂直翻转ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.垂直翻转ToolStripMenuItem.Text = "垂直翻转";
             this.垂直翻转ToolStripMenuItem.Click += new System.EventHandler(this.垂直翻转ToolStripMenuItem_Click);
             // 
             // 顺时针旋转90度ToolStripMenuItem
             // 
             this.顺时针旋转90度ToolStripMenuItem.Name = "顺时针旋转90度ToolStripMenuItem";
-            this.顺时针旋转90度ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.顺时针旋转90度ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.顺时针旋转90度ToolStripMenuItem.Text = "顺时针旋转90度";
             this.顺时针旋转90度ToolStripMenuItem.Click += new System.EventHandler(this.顺时针旋转90度ToolStripMenuItem_Click);
             // 
             // 逆时针旋转90度ToolStripMenuItem
             // 
             this.逆时针旋转90度ToolStripMenuItem.Name = "逆时针旋转90度ToolStripMenuItem";
-            this.逆时针旋转90度ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.逆时针旋转90度ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.逆时针旋转90度ToolStripMenuItem.Text = "逆时针旋转90度";
             this.逆时针旋转90度ToolStripMenuItem.Click += new System.EventHandler(this.逆时针旋转90度ToolStripMenuItem_Click);
             // 
             // 反色ToolStripMenuItem
             // 
             this.反色ToolStripMenuItem.Name = "反色ToolStripMenuItem";
-            this.反色ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.反色ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.反色ToolStripMenuItem.Text = "反色";
             this.反色ToolStripMenuItem.Click += new System.EventHandler(this.反色ToolStripMenuItem_Click);
             // 
             // 浮雕ToolStripMenuItem
             // 
             this.浮雕ToolStripMenuItem.Name = "浮雕ToolStripMenuItem";
-            this.浮雕ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.浮雕ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.浮雕ToolStripMenuItem.Text = "浮雕";
             this.浮雕ToolStripMenuItem.Click += new System.EventHandler(this.浮雕ToolStripMenuItem_Click);
             // 
             // 黑白ToolStripMenuItem
             // 
             this.黑白ToolStripMenuItem.Name = "黑白ToolStripMenuItem";
-            this.黑白ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.黑白ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.黑白ToolStripMenuItem.Text = "黑白";
             this.黑白ToolStripMenuItem.Click += new System.EventHandler(this.黑白ToolStripMenuItem_Click);
             // 
             // 柔化ToolStripMenuItem
             // 
             this.柔化ToolStripMenuItem.Name = "柔化ToolStripMenuItem";
-            this.柔化ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.柔化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.柔化ToolStripMenuItem.Text = "柔化";
             this.柔化ToolStripMenuItem.Click += new System.EventHandler(this.柔化ToolStripMenuItem_Click);
             // 
             // 锐化ToolStripMenuItem
             // 
             this.锐化ToolStripMenuItem.Name = "锐化ToolStripMenuItem";
-            this.锐化ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.锐化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.锐化ToolStripMenuItem.Text = "锐化";
             this.锐化ToolStripMenuItem.Click += new System.EventHandler(this.锐化ToolStripMenuItem_Click);
             // 
             // 灰度化ToolStripMenuItem
             // 
             this.灰度化ToolStripMenuItem.Name = "灰度化ToolStripMenuItem";
-            this.灰度化ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.灰度化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.灰度化ToolStripMenuItem.Text = "灰度化";
             this.灰度化ToolStripMenuItem.Click += new System.EventHandler(this.灰度化ToolStripMenuItem_Click);
             // 
             // 雾化ToolStripMenuItem
             // 
             this.雾化ToolStripMenuItem.Name = "雾化ToolStripMenuItem";
-            this.雾化ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.雾化ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.雾化ToolStripMenuItem.Text = "雾化";
             this.雾化ToolStripMenuItem.Click += new System.EventHandler(this.雾化ToolStripMenuItem_Click);
             // 
             // 马赛克效果ToolStripMenuItem
             // 
             this.马赛克效果ToolStripMenuItem.Name = "马赛克效果ToolStripMenuItem";
-            this.马赛克效果ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.马赛克效果ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.马赛克效果ToolStripMenuItem.Text = "马赛克效果";
             this.马赛克效果ToolStripMenuItem.Click += new System.EventHandler(this.马赛克效果ToolStripMenuItem_Click);
             // 
             // 图像大小设置ToolStripMenuItem
             // 
             this.图像大小设置ToolStripMenuItem.Name = "图像大小设置ToolStripMenuItem";
-            this.图像大小设置ToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.图像大小设置ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.图像大小设置ToolStripMenuItem.Text = "图像大小设置";
             this.图像大小设置ToolStripMenuItem.Click += new System.EventHandler(this.图像大小设置ToolStripMenuItem_Click);
             // 
@@ -653,7 +653,7 @@
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::ouyangxu.Properties.Resources._new;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(29, 25);
@@ -663,7 +663,7 @@
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::ouyangxu.Properties.Resources.Open;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(29, 25);
@@ -673,7 +673,7 @@
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::ouyangxu.Properties.Resources.save;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(29, 25);
@@ -688,7 +688,7 @@
             // toolStripButton4
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::ouyangxu.Properties.Resources.real;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(29, 25);
@@ -708,7 +708,7 @@
             // toolStripButton6
             // 
             this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = global::ouyangxu.Properties.Resources.zoom1;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.Size = new System.Drawing.Size(29, 25);
@@ -718,7 +718,7 @@
             // toolStripButton7
             // 
             this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = global::ouyangxu.Properties.Resources.zoom2;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(29, 25);
@@ -733,7 +733,7 @@
             // toolStripButton8
             // 
             this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = global::ouyangxu.Properties.Resources._154133;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
             this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.Size = new System.Drawing.Size(29, 25);
@@ -743,7 +743,7 @@
             // toolStripButton9
             // 
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = global::ouyangxu.Properties.Resources.ruihua;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(29, 25);
@@ -753,7 +753,7 @@
             // toolStripButton10
             // 
             this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = global::ouyangxu.Properties.Resources.tablecellsplit;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
             this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton10.Name = "toolStripButton10";
             this.toolStripButton10.Size = new System.Drawing.Size(29, 25);
@@ -763,7 +763,7 @@
             // toolStripButton11
             // 
             this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = global::ouyangxu.Properties.Resources.hd;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
             this.toolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton11.Name = "toolStripButton11";
             this.toolStripButton11.Size = new System.Drawing.Size(29, 25);
@@ -778,7 +778,7 @@
             // toolStripButton12
             // 
             this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = global::ouyangxu.Properties.Resources.hr1;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.Size = new System.Drawing.Size(29, 25);
@@ -788,7 +788,7 @@
             // toolStripButton13
             // 
             this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.Image = global::ouyangxu.Properties.Resources.hr2;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
             this.toolStripButton13.Size = new System.Drawing.Size(29, 25);
@@ -798,7 +798,7 @@
             // toolStripButton14
             // 
             this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = global::ouyangxu.Properties.Resources.rotait1;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.Size = new System.Drawing.Size(29, 25);
@@ -808,7 +808,7 @@
             // toolStripButton15
             // 
             this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton15.Image = global::ouyangxu.Properties.Resources.rotait2;
+            this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
             this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.Size = new System.Drawing.Size(29, 25);
@@ -922,7 +922,7 @@
             // 
             // toolStrip2
             // 
-            this.toolStrip2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.toolStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -963,7 +963,7 @@
             // toolStripButton19
             // 
             this.toolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton19.Image = global::ouyangxu.Properties.Resources.line;
+            this.toolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton19.Image")));
             this.toolStripButton19.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton19.Name = "toolStripButton19";
             this.toolStripButton19.Size = new System.Drawing.Size(27, 24);
@@ -1003,7 +1003,7 @@
             // toolStripButton23
             // 
             this.toolStripButton23.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton23.Image = global::ouyangxu.Properties.Resources.ellipsefill;
+            this.toolStripButton23.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton23.Image")));
             this.toolStripButton23.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton23.Name = "toolStripButton23";
             this.toolStripButton23.Size = new System.Drawing.Size(27, 24);
@@ -1013,7 +1013,7 @@
             // toolStripButton24
             // 
             this.toolStripButton24.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton24.Image = global::ouyangxu.Properties.Resources.ellipse;
+            this.toolStripButton24.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton24.Image")));
             this.toolStripButton24.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton24.Name = "toolStripButton24";
             this.toolStripButton24.Size = new System.Drawing.Size(27, 24);
@@ -1023,7 +1023,7 @@
             // toolStripButton25
             // 
             this.toolStripButton25.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton25.Image = global::ouyangxu.Properties.Resources.rectfill;
+            this.toolStripButton25.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton25.Image")));
             this.toolStripButton25.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton25.Name = "toolStripButton25";
             this.toolStripButton25.Size = new System.Drawing.Size(27, 24);
@@ -1033,7 +1033,7 @@
             // toolStripButton26
             // 
             this.toolStripButton26.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton26.Image = global::ouyangxu.Properties.Resources.rect;
+            this.toolStripButton26.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton26.Image")));
             this.toolStripButton26.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton26.Name = "toolStripButton26";
             this.toolStripButton26.Size = new System.Drawing.Size(27, 24);
