@@ -527,26 +527,31 @@ namespace ouyangxu
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
             line_type = DashStyle.Solid;
+            toolStripComboBox1.SelectedIndex = 0;
         }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             line_type = DashStyle.DashDot;
+            toolStripComboBox1.SelectedIndex = 1;
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             line_type = DashStyle.DashDotDot;
+            toolStripComboBox1.SelectedIndex = 2;
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             line_type = DashStyle.Dash;
+            toolStripComboBox1.SelectedIndex = 3;
         }
 
         private void toolStripMenuItem6_Click(object sender, EventArgs e)
         {
             line_type = DashStyle.Dot;
+            toolStripComboBox1.SelectedIndex = 4;
         }
 
         private void 无ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1270,6 +1275,23 @@ namespace ouyangxu
             uncheckallbutten();
             toolStripButton16.Checked = true;
             Cursor = Cursors.Cross;
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DashStyle[] dashStyles = new DashStyle[] {
+                DashStyle.Solid,
+                DashStyle.DashDot,
+                DashStyle.DashDotDot,
+                DashStyle.Dash,
+                DashStyle.Dot
+            };
+            line_type = dashStyles[toolStripComboBox1.SelectedIndex];
         }
 
         public Color endcolor
